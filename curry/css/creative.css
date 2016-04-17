@@ -4,6 +4,18 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/*    CUSTOM CSS     */
+#nav {
+    position:fixed; 
+    top:300;
+}
+
+#chart-area{
+    background-color: #003366;
+}
+
+
+
 html,
 body {
     width: 100%;
