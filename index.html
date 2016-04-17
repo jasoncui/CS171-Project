@@ -53,16 +53,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#home">Home</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#services">Services</a>
+                        <a class="page-scroll" href="#vis">Visualizations</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#portfolio">Portfolio</a>
+                        <a class="page-scroll" href="#stats">Stats</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">Images</a>
                     </li>
                 </ul>
             </div>
@@ -79,7 +79,7 @@
             <div class="header-content-inner">
                 <h1 class="wow fadeIn" data-wow-delay="1s">The Meteoric Rise of Stephen Curry</h1>
                 <p class="wow fadeIn" data-wow-delay="2s">Track the epic saga from college to present of one of the game's greatest shooters of all time.</p>
-                <!-- <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a> -->
+                <!--
                 <div class="container" id = "nav">
                   <ul class="nav nav-tabs nav-justified">
                     <li class="active"><a data-toggle="tab" href="#home">Home</a></li>
@@ -88,33 +88,44 @@
                     <li><a data-toggle="tab"href="#images">Images</a></li>
                   </ul>
                 </div>
-
+                -->
             </div>
         </div>
     </header>
 
-    <section class="bg-primary" id="about">
+    <section class="bg-primary" id="home">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <h2 class="section-heading">Career Summary</h2>
                     <hr class="light">
                     <p class="text-faded"> WRITE ABOUT STEPHEN CURRY HERE </p>
-                    <a href="#services" class="btn btn-default btn-xl page-scroll">Show Me More</a>
+                    <a href="#vis" class="btn btn-default btn-xl page-scroll">Show Me More</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services">
+
+    <section id="vis" class="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading">Visualizations</h2>
                     <hr class="primary">
                 </div>
             </div>
         </div>
+        <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <div> Sort by:</div>
+                        <div class = "select-box"></div>
+                        <div class = "chart" id= "chart-area" color="white"></div>
+                    </div>  
+                </div>
+            </div>
+        <!--
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 text-center">
@@ -147,9 +158,10 @@
                 </div>
             </div>
         </div>
+        -->
     </section>
 
-    <section class="no-padding" id="portfolio">
+    <section class="no-padding" id="stats">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
@@ -275,10 +287,8 @@
         </div>
     </section>
 
-    <section id = "chart">
-         <div class = "chart" id= "chart-area"></div>
-    </section>
-   
+
+    </div>
 
     <!-- jQuery -->
     <script src="curry/js/jquery.js"></script>
