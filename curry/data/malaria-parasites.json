@@ -1,0 +1,54 @@
+[{
+  "name": "Stephen Curry",
+  "parent": "null",
+  "children": [
+    {
+      "name": "Davidson Wildcats",
+      "parent": "Stephen Curry",
+      "children": [
+        {
+          "name": "Freshman Career",
+          "parent": "Davidson Wildcats"
+        },
+        {
+          "name": "Sophomore Career",
+          "parent": "Davidson Wildcats"
+        },
+        {
+          "name": "Junior Career",
+          "parent": "Davidson Wildcats"
+        },
+        {
+          "name": "Senior Career",
+          "parent": "Davidson Wildcats"
+        }
+      ]
+    },
+    {
+      "name": "Golden State Warriors",
+      "parent": "Stephen Curry",
+      "children": [
+        {
+          "name": "Early seasons (2009–11)",
+          "parent": "Golden State Warriors"
+        },
+        {
+          "name": "Injury-riddled year (2011–12)",
+          "parent": "Golden State Warriors"
+        },
+        {
+          "name": "Getting back on track (2012–14)",
+          "parent": "Golden State Warriors"
+        },
+        {
+          "name": "NBA championship and MVP (2014–15)",
+          "parent": "Golden State Warriors"
+        },
+        {
+          "name": "2015–16 season",
+          "parent": "Golden State Warriors"
+        }
+       ]
+    }
+  ]
+}]
