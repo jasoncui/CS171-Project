@@ -16,7 +16,7 @@ var svg2 = d3.select("#tree").append("svg")
     .append("g")
     .attr("transform", "translate(" + 220 + "," + margin2.top + ")");
 
-d3.json("curry/data/malaria-parasites.json", function(error, json) {
+d3.json("curry/data/steph-career.json", function(error, json) {
 
     if (error) return console.warn(error);
     data = json;
