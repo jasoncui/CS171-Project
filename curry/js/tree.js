@@ -1,8 +1,11 @@
+
 var margin2 = {top: 20, right: 120, bottom: 20, left: 120},
     width2 = 960 - margin2.right - margin2.left,
     height2 = 500 - margin2.top - margin2.bottom;
 
 var i = 0;
+
+var tree_data;
 
 var tree = d3.layout.tree()
     .size([height2, width2]);
@@ -19,10 +22,10 @@ var svg2 = d3.select("#tree").append("svg")
 d3.json("curry/data/steph-career.json", function(error, json) {
 
     if (error) return console.warn(error);
-    data = json;
+    tree_data = json;
 
 
-    root = data[0];
+    root = tree_data[0];
 
     update(root);
 
@@ -60,6 +63,7 @@ d3.json("curry/data/steph-career.json", function(error, json) {
             .style("fill-opacity", 1);
 
         // Declare the links¦
+        
         var link = svg2.selectAll("path.link")
             .data(links, function(d) { return d.target.id; });
 
@@ -67,6 +71,7 @@ d3.json("curry/data/steph-career.json", function(error, json) {
         link.enter().insert("path", "g")
             .attr("class", "link")
             .attr("d", diagonal);
+         
 
     }
 
