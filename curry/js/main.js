@@ -5,17 +5,17 @@ var margin = {top: 40, right: 40, bottom: 60, left: 60};
 var width = 1000 - margin.left - margin.right,
 		height = 500 - margin.top - margin.bottom;
 
-var svg = d3.select("#chart-area").append("svg")
+var svg = d3.select("#chart-area-career").append("svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
-		.attr("fill", "white");
+		.attr("fill", "blue");
 
 svg.append("g")
 	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var formatDate = d3.time.format("%Y");
 loadData();
-var globaldata;
+var data;
 var original;
 
 /* Initialize tooltip */
@@ -32,13 +32,10 @@ function loadData() {
 			d.FT_P = +d.FT_P;
 			d.P2P_P = +d.P2P_P;
 			d.P3P_P = +d.P3P_P;
-
 		});
 		data = csv;
-
 		console.log(data);
 		console.log("length", data.length);
-
 		updateVisualization();
 	});
 }
@@ -50,7 +47,7 @@ function updateVisualization() {
 	    .domain(data.map(function(d) {
         return d.Season;
 	    }))
-	    .rangeRoundBands([0, width], 0.1);
+	    .rangeRoundBands([0, width], 0.05);
 
     var xAxis = d3.svg.axis()
         .scale(x)
@@ -68,9 +65,9 @@ function updateVisualization() {
         .orient("left");
 
     var line = d3.svg.line()
-	    .x(function(d) { return x(d.Season); })
+	    .x(function(d) { return x(d.Season)+50; })
 	    .y(function(d) { return y(d.G); })
-	    .interpolate("linear");
+	    .interpolate("linear")
 
 
 	// trying things out
@@ -78,14 +75,14 @@ function updateVisualization() {
 
     path.enter().append('svg:path').attr('d', line(data))
         .style('stroke-width', 1)
-        .style('stroke', 'steelblue')
+        .style('stroke', 'red')
         .style("fill", "none");
 
    
     var circles = svg.selectAll('circle').data(data);
 
     circles.enter().append("circle")
-		.attr("cx", function(d){ return x(d.Season)})
+		.attr("cx", function(d){ return x(d.Season)+50})
 		.attr("cy", function(d){ return y(d.G)})
 		.attr("fill", "pink")
 		.attr("r", 8)
@@ -96,7 +93,7 @@ function updateVisualization() {
 
 	svg.append("g")
         .attr("class", "x axis")
-        .attr("transform", "translate(0," + height + ")")
+        .attr("transform", "translate(50," + height + ")")
         .style("text-anchor", "end")
         .text("Season")
         .call(xAxis)
@@ -106,6 +103,7 @@ function updateVisualization() {
     var group = svg.append("g")
         .attr("class", "y axis")
         .call(yAxis)
+        .attr("transform", "translate(50,0)")
     var y_label = group.append("text")
         .attr("transform", "rotate(-90)")
         .attr("y", 6)
@@ -118,7 +116,7 @@ function updateVisualization() {
    	// ------------- other options
    	 var data1 = [ "FG", "3PT Percentage", "FTP"];
 
-   	 var select = d3.select(".select-box")
+   	 var select = d3.select("#select-box")
 		.append('select')
 		.attr('class','select')
 	    .on('change', onchange)
@@ -131,6 +129,7 @@ function updateVisualization() {
 
 
 	function onchange() {
+
 		svg.call(tip);
 		path.remove();
 		circles.remove();
@@ -146,7 +145,7 @@ function updateVisualization() {
 			"</span><p><strong style='color:yellow'>Goals:</strong> <span style='color:yellow'>" + d.FG_P; }})
 
 		    circles.enter().append("circle")
-				.attr("cx", function(d){ return x(d.Season)})
+				.attr("cx", function(d){ return x(d.Season) + 50})
 				.attr("cy", function(d){ return y(d.FG_P)})
 				.attr("fill", "pink")
 				.on('mouseover', tip.show)
@@ -162,7 +161,7 @@ function updateVisualization() {
 			"</span><p><strong style='color:yellow'>Goals:</strong> <span style='color:yellow'>" + d.P3P_P; }})
 
 		  	circles.enter().append("circle")
-				.attr("cx", function(d){ return x(d.Season)})
+				.attr("cx", function(d){ return x(d.Season) + 50})
 				.attr("cy", function(d){ return y(d.P3P_P)})
 				.attr("fill", "pink")
 				.on('mouseover', tip.show)
@@ -178,7 +177,7 @@ function updateVisualization() {
 			"</span><p><strong style='color:yellow'>Goals:</strong> <span style='color:yellow'>" + d.FT_P; }})
 
 		    circles.enter().append("circle")
-				.attr("cx", function(d){ return x(d.Season)})
+				.attr("cx", function(d){ return x(d.Season) + 50})
 				.attr("cy", function(d){ return y(d.FT_P)})
 				.attr("fill", "pink")
 				.on('mouseover', tip.show)
@@ -207,7 +206,7 @@ function updateVisualization() {
 	    	.transition()
 	    	.duration(800)
 	        .style('stroke-width', 1)
-	        .style('stroke', 'steelblue')
+	        .style('stroke', 'red')
 	        .style("fill", "none");
 	    path.exit().remove();
     }
