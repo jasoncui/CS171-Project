@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4c8a35-3b5a-4af5-a3b2-54a4395495e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Curry Test 1.iws" />
@@ -34,23 +33,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cbpAnimatedHeader.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/curry/js/cbpAnimatedHeader.js">
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/curry/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="classie.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/curry/js/classie.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.17017828">
+              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding>
-                <element signature="n#!!doc" expanded="true" />
+                <marker date="1460868315000" expanded="true" signature="637:649" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="681:693" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="738:750" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="781:793" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="3629:3641" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="3673:3685" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="3731:3743" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="3774:3786" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="4262:4274" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="4306:4318" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="4364:4376" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="4407:4419" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="4976:4988" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="5020:5032" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="5078:5090" placeholder="..." />
+                <marker date="1460868315000" expanded="true" signature="5121:5133" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -86,10 +90,9 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="207" />
-    <option name="y" value="86" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="716" />
+    <option name="height" value="714" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -191,10 +194,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="207" y="86" width="1280" height="716" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1280" height="714" extended-state="6" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2296875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -252,11 +255,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/curry/js/classie.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="9.782609">
-          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
-          <folding />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -268,12 +273,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curry/js/classie.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="9.782609">
+          <caret line="8" column="40" selection-start-line="8" selection-start-column="40" selection-end-line="8" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curry/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17017828">
+          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <marker date="1460868315000" expanded="true" signature="637:649" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="681:693" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="738:750" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="781:793" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="3629:3641" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="3673:3685" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="3731:3743" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="3774:3786" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="4262:4274" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="4306:4318" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="4364:4376" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="4407:4419" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="4976:4988" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="5020:5032" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="5078:5090" placeholder="..." />
+            <marker date="1460868315000" expanded="true" signature="5121:5133" placeholder="..." />
           </folding>
         </state>
       </provider>
