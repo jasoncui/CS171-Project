@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4c8a35-3b5a-4af5-a3b2-54a4395495e0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curry/css/mainvis.css" afterPath="$PROJECT_DIR$/curry/css/mainvis.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainvis.html" afterPath="$PROJECT_DIR$/mainvis.html" />
     </list>
     <ignored path="Curry Test 1.iws" />
@@ -26,8 +29,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-38.565216">
-              <caret line="112" column="18" selection-start-line="79" selection-start-column="3" selection-end-line="112" selection-end-column="18" />
+            <state vertical-scroll-proportion="-3.7">
+              <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -36,28 +39,28 @@
       <file leaf-file-name="creative.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/curry/css/creative.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-81.6">
-              <caret line="272" column="50" selection-start-line="272" selection-start-column="49" selection-end-line="272" selection-end-column="50" />
+            <state vertical-scroll-proportion="-142.2">
+              <caret line="474" column="19" selection-start-line="474" selection-start-column="19" selection-end-line="474" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainvis.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mainvis.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/curry/css/mainvis.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.82">
-              <caret line="199" column="4" selection-start-line="199" selection-start-column="4" selection-end-line="199" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.45180723">
+              <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainvis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.9124854">
-              <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
+            <state vertical-scroll-proportion="-5.4">
+              <caret line="18" column="107" selection-start-line="18" selection-start-column="107" selection-end-line="18" selection-end-column="107" />
               <folding />
             </state>
           </provider>
@@ -120,10 +123,10 @@
         <option value="$PROJECT_DIR$/curry/js/d3.basketball-shot-chart.js" />
         <option value="$PROJECT_DIR$/curry/css/d3.basketball-shot-chart.css" />
         <option value="$PROJECT_DIR$/curry/js/shot-chart.js" />
-        <option value="$PROJECT_DIR$/curry/css/creative.css" />
-        <option value="$PROJECT_DIR$/curry/css/mainvis.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/curry/css/creative.css" />
         <option value="$PROJECT_DIR$/mainvis.html" />
+        <option value="$PROJECT_DIR$/curry/css/mainvis.css" />
       </list>
     </option>
   </component>
@@ -572,34 +575,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curry/css/creative.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-81.6">
-          <caret line="272" column="50" selection-start-line="272" selection-start-column="49" selection-end-line="272" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curry/css/mainvis.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.82">
-          <caret line="199" column="4" selection-start-line="199" selection-start-column="4" selection-end-line="199" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-38.565216">
-          <caret line="112" column="18" selection-start-line="79" selection-start-column="3" selection-end-line="112" selection-end-column="18" />
+        <state vertical-scroll-proportion="-3.7">
+          <caret line="49" column="20" selection-start-line="49" selection-start-column="20" selection-end-line="49" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curry/css/creative.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-142.2">
+          <caret line="474" column="19" selection-start-line="474" selection-start-column="19" selection-end-line="474" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainvis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9124854">
-          <caret line="131" column="14" selection-start-line="131" selection-start-column="14" selection-end-line="131" selection-end-column="14" />
+        <state vertical-scroll-proportion="-5.4">
+          <caret line="18" column="107" selection-start-line="18" selection-start-column="107" selection-end-line="18" selection-end-column="107" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curry/css/mainvis.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45180723">
+          <caret line="25" column="34" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
           <folding />
         </state>
       </provider>
