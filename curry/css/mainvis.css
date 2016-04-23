@@ -580,3 +580,11 @@ div.tooltip {
 .arc path {
     stroke: #fff;
 }
+
+.bio-intro {
+    margin-bottom: 20px;
+}
+
+#yellow-highlight {
+    color: #FFD700;
+}

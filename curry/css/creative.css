@@ -23,7 +23,7 @@ body {
 }
 
 body {
-    font-family: "Lato",'Helvetica Neue',Arial,sans-serif;
+    font-family: "Roboto Condensed",'Helvetica Neue',Arial,sans-serif;
     font-weight: 300;
 }
 
@@ -247,7 +247,6 @@ header .header-content .header-content-inner p {
     margin-bottom: 30px;
     font-size: 16px;
     font-weight: 300;
-    color: rgba(255,255,255,.7);
 }
 
 @media(min-width:768px) {
