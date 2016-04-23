@@ -96,12 +96,37 @@
         </div>
     </section>
 
-    <section id="services">
+    <section id="vis" class="services">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">At Your Service</h2>
+                    <h2 class="section-heading">Visualizations</h2>
                     <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Viz 1</h2>
+                    <div> Sort by:</div>
+                    <div class = "select-box" id = "select-box"></div>
+                    <div class = "chart" id= "chart-area-career" color="white"></div>
+
+                    <h2 class="section-heading">Viz 2</h2>
+                    <div class = "chart" id= "chart-area-college" color="white"></div>
+
+                    <div> Sort by:</div>
+                    <div class = "select-box" id = "select-box-college"></div>
+
+                    <h2 class="section-heading">Viz 3</h2>
+                    <div class = "chart" id= "tree" color="white"></div>
+
+                    <h2 class="section-heading">Viz 4</h2>
+                    <div class = "chart" id= "pie" color="white"></div>
+
+                    <h2 class="section-heading">Shot Chart</h2>
+                    <p class='center' id='shot-chart'></p>
                 </div>
             </div>
         </div>
@@ -278,6 +303,19 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="curry/js/creative.js"></script>
+
+    <script src="curry/js/d3.min.js"></script>
+    <script src="curry/js/d3.tip.js"></script>
+    <script src="curry/js/hexbin.js"></script>
+    <script src="curry/js/d3.chart.js"></script>
+    <script src="curry/js/d3.chart.defaults.js"></script>
+    <script src="curry/js/d3.basketball-shot-chart.js"></script>
+
+    <script src="curry/js/career.js"></script>
+    <script src="curry/js/college.js"></script>
+    <script src="curry/js/tree.js"></script>
+    <script src="curry/js/pie.js"></script>
+    <script src="curry/js/shot-chart.js"></script>
 
 </body>
 
