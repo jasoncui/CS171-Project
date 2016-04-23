@@ -79,6 +79,14 @@
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
 
+        svg.append("text")
+            .attr("x", (width / 2))
+            .attr("y", 0 - (margin.top / 2) + 20)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .style("text-decoration", "underline")
+            .text("Three Pointer Percentage");
+
         svg2.append("g")
             .attr("class", "x axis")
             .attr("transform", "translate(0," + height + ")")
