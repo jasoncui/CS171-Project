@@ -197,7 +197,7 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background-image: url(../img/curry.jpeg);
+    background-image: url(../img/curry.jpg);
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -363,6 +363,14 @@ header .header-content .header-content-inner p {
 
 .text-primary {
     color: #003366;
+}
+
+.text-secondary {
+    color: white;
+}
+
+.text-tertiary {
+    color: #FDB927;
 }
 
 .no-gutter > [class*=col-] {
@@ -635,3 +643,8 @@ div.tooltip {
     margin: -1px 0 0 0;
     top: 100%;
     left: 0;
+
+.space-at-bottom {
+    margin-bottom: 30px;
+}
+
