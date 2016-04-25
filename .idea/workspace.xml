@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4c8a35-3b5a-4af5-a3b2-54a4395495e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curry/css/mainvis.css" afterPath="$PROJECT_DIR$/curry/css/mainvis.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curry/js/bar.js" afterPath="$PROJECT_DIR$/curry/js/bar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curry/js/collegeVis.js" afterPath="$PROJECT_DIR$/curry/js/collegeVis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainvis.html" afterPath="$PROJECT_DIR$/mainvis.html" />
     </list>
     <ignored path="Curry Test 1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,13 +43,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bar.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="bar.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/curry/js/bar.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.5555556">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.22765599">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding>
-                <marker date="1461546729000" expanded="true" signature="697:708" placeholder="..." />
+                <marker date="1461546832000" expanded="true" signature="697:708" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -69,10 +65,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainvis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57894737">
+            <state vertical-scroll-proportion="-1.8">
               <caret line="137" column="53" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -122,8 +118,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/curry/css/mainvis.css" />
         <option value="$PROJECT_DIR$/curry/js/collegeVis.js" />
-        <option value="$PROJECT_DIR$/curry/js/bar.js" />
         <option value="$PROJECT_DIR$/mainvis.html" />
+        <option value="$PROJECT_DIR$/curry/js/bar.js" />
       </list>
     </option>
   </component>
@@ -623,22 +619,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curry/js/bar.js">
+    <entry file="file://$PROJECT_DIR$/mainvis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5555556">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        <state vertical-scroll-proportion="-1.8">
+          <caret line="137" column="53" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
           <folding>
-            <marker date="1461546729000" expanded="true" signature="697:708" placeholder="..." />
+            <element signature="n#style#0;n#div#2;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mainvis.html">
+    <entry file="file://$PROJECT_DIR$/curry/js/bar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57894737">
-          <caret line="137" column="53" selection-start-line="137" selection-start-column="53" selection-end-line="137" selection-end-column="53" />
+        <state vertical-scroll-proportion="0.22765599">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1461546832000" expanded="true" signature="697:708" placeholder="..." />
           </folding>
         </state>
       </provider>
