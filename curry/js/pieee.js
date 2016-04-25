@@ -15,7 +15,7 @@ var Scale = d3.scale.linear()
     .range([2, 20]);
 
 //Create svg_pie element
-var svg_pie = d3.select("body")
+var svg_pie = d3.select("#college-vis")
     .append("svg")
     .attr("width", w)
     .attr("height", h);

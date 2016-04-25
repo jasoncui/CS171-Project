@@ -553,10 +553,11 @@ body {
     margin-top: 20px;
 }
 
+/*
 path {
     stroke:white;
     stroke-width: 1px;
-}
+}*/
 
 .city {
     font: 10px sans-serif;
@@ -620,11 +621,48 @@ div.tooltip {
     display: none;
 }
 
+
 .d3-tip {
     line-height: 1;
     font-weight: bold;
     padding: 12px;
     background: rgba(43, 46, 47, 0.8);
+    color: #fff;
+    border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip 
+.d3-tip:after {
+    box-sizing: border-box;
+    display: inline;
+    font-size: 10px;
+    width: 100%;
+    line-height: 1;
+    color: rgba(0, 0, 0, 0.8);
+    content: "\25BC";
+    position: absolute;
+    text-align: center;
+}
+
+/* Style northward tooltips differently 
+.d3-tip.n:after {
+    margin: -1px 0 0 0;
+    top: 100%;
+    left: 0;
+
+.space-at-bottom {
+    margin-bottom: 30px;
+}
+
+*/
+
+
+/* d3-tip */
+.d3-tip {
+    line-height: 1;
+    font-weight: bold;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.8);
     color: #fff;
     border-radius: 2px;
 }
@@ -644,11 +682,40 @@ div.tooltip {
 
 /* Style northward tooltips differently */
 .d3-tip.n:after {
-    margin: -1px 0 0 0;
+    margin: -4px 0 0 0;
     top: 100%;
     left: 0;
+}
 
-.space-at-bottom {
-    margin-bottom: 30px;
+
+
+/* Pie chart */
+.pie-chart-tip {
+    font-size: 10px;
+}
+
+.bar {
+    fill: orange;
+}
+
+.solidArc:hover {
+    fill: orangered ;
+}
+
+.solidArc {
+    -moz-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.aster-score { 
+    line-height: 1;
+    font-weight: bold;
+    font-size: 100%;
+}
+
+.x.axis path {
+    display: none;
 }
 
