@@ -65,10 +65,10 @@ p {
 }
 
 .bg-primary {
-    background-color: #003366;
+    background-color: #006BB6;
 }
 
-.services {
+.visualizations {
     background-color: #fff;
 }
 
@@ -370,7 +370,7 @@ header .header-content .header-content-inner p {
 }
 
 .text-tertiary {
-    color: #FDB927;
+    color: #FFD700;
 }
 
 .no-gutter > [class*=col-] {
@@ -432,9 +432,9 @@ fieldset[disabled] .btn-default.active {
 }
 
 .btn-primary {
-    border-color: #003366;
+    border-color: #006BB6;
     color: #fff;
-    background-color: #003366;
+    background-color: #006BB6;
     -webkit-transition: all .35s;
     -moz-transition: all .35s;
     transition: all .35s;
@@ -595,6 +595,10 @@ div.tooltip {
 
 #yellow-highlight {
     color: #FFD700;
+}
+
+#blue-highlight {
+    color:#006BB6;
 }
 
 .axis path,
