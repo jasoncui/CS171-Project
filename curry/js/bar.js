@@ -1,6 +1,6 @@
     var margin = {top: 40, right: 20, bottom: 30, left: 40},
-        width = 550 - margin.left - margin.right,
-        height = 400 - margin.top - margin.bottom;
+        width = 500 - margin.left - margin.right,
+        height = 300 - margin.top - margin.bottom;
 
     var formatPercent = d3.format(".0%");
 
@@ -23,7 +23,7 @@
         .attr('class', 'd3-tip')
         .offset([-10, 0])
         .html(function(d) {
-            return "<strong>Percentage:</strong> <span style='color:white'>" + d.threes + "</span>";
+            return "<strong>Percentage:</strong> <span style='color:white'>" + d.threesPercentage + "</span>";
         })
 
     var svg = d3.select("#bar1").append("svg")
@@ -46,7 +46,7 @@
 
     svg.call(tip);
 
-    d3.csv("curry/data/data.csv", type, function(error, data) {
+    d3.csv("curry/data/curry_college_data.csv", type, function(error, data) {
 
         console.log(data);
 
@@ -74,8 +74,8 @@
             .attr("class", "bar")
             .attr("x", function(d) { return x(d.season); })
             .attr("width", x.rangeBand())
-            .attr("y", function(d) { return y(d.threes); })
-            .attr("height", function(d) { return height - y(d.threes); })
+            .attr("y", function(d) { return y(d.threesPercentage); })
+            .attr("height", function(d) { return height - y(d.threesPercentage); })
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
 
@@ -100,7 +100,7 @@
             .attr("y", 6)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .text("Free Throws");
+            .text("Field Goals");
 
         svg2.selectAll(".bar")
             .data(data)
@@ -108,8 +108,8 @@
             .attr("class", "bar")
             .attr("x", function(d) { return x(d.season); })
             .attr("width", x.rangeBand())
-            .attr("y", function(d) { return y(d.freethrows); })
-            .attr("height", function(d) { return height - y(d.freethrows); })
+            .attr("y", function(d) { return y(d.fieldGoalPercentage); })
+            .attr("height", function(d) { return height - y(d.fieldGoalPercentage); })
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
 
@@ -119,7 +119,7 @@
             .attr("text-anchor", "middle")
             .style("font-size", "16px")
             .style("text-decoration", "underline")
-            .text("Free Throw Percentage");
+            .text("Field Goal Percentage");
 
         svg3.append("g")
             .attr("class", "x axis")
@@ -142,8 +142,8 @@
             .attr("class", "bar")
             .attr("x", function(d) { return x(d.season); })
             .attr("width", x.rangeBand())
-            .attr("y", function(d) { return y(d.blockPercentage); })
-            .attr("height", function(d) { return height - y(d.blockPercentage); })
+            .attr("y", function(d) { return y(d.freeThrowPercentage); })
+            .attr("height", function(d) { return height - y(d.freeThrowPercentage); })
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
 
@@ -152,4 +152,17 @@
     function type(d) {
         d.threes = +d.threes;
         return d;
+    }
+
+    function dataManipulation() {
+
+        // gets order area and type from dropdown selection and stores in variables
+        var selectBoxArea = document.getElementById("area");
+        var orderArea = selectBoxArea.options[selectBoxArea.selectedIndex].value;
+
+        // tests to see area and order type selected
+        console.log(orderArea);
+
+        // calls dataFiltering on new criteria
+        // dataFiltering(orderArea, orderType)
     }

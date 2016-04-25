@@ -654,6 +654,7 @@ div.tooltip {
     margin-bottom: 30px;
 }
 
+<<<<<<< Updated upstream
 */
 
 
@@ -719,3 +720,11 @@ div.tooltip {
     display: none;
 }
 
+=======
+.form-control {
+    width: 40%;
+    margin: 0 auto;
+    float: none;
+    margin-top: 20px;
+}
+>>>>>>> Stashed changes
