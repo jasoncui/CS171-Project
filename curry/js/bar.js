@@ -1,5 +1,5 @@
     var margin = {top: 40, right: 20, bottom: 30, left: 40},
-        width = 600 - margin.left - margin.right,
+        width = 550 - margin.left - margin.right,
         height = 400 - margin.top - margin.bottom;
 
     var formatPercent = d3.format(".0%");
@@ -66,7 +66,7 @@
             .attr("y", 6)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .text("threes");
+            .text("Three Pointers");
 
         svg.selectAll(".bar")
             .data(data)
@@ -100,7 +100,7 @@
             .attr("y", 6)
             .attr("dy", ".71em")
             .style("text-anchor", "end")
-            .text("free throws");
+            .text("Free Throws");
 
         svg2.selectAll(".bar")
             .data(data)
@@ -112,6 +112,14 @@
             .attr("height", function(d) { return height - y(d.freethrows); })
             .on('mouseover', tip.show)
             .on('mouseout', tip.hide)
+
+        svg2.append("text")
+            .attr("x", (width / 2))
+            .attr("y", 0 - (margin.top / 2) + 20)
+            .attr("text-anchor", "middle")
+            .style("font-size", "16px")
+            .style("text-decoration", "underline")
+            .text("Free Throw Percentage");
 
         svg3.append("g")
             .attr("class", "x axis")
