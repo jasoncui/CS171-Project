@@ -1,0 +1,38 @@
+{
+  "name": "Stephen Curry",
+  "children": [
+    {
+      "name": "College Awards",
+      "children": [
+        {"name": "2× SoCon Player of the Year (2008–2009)"},
+        {"name": "Consensus first-team All-American (2009)"},
+        {"name": "Consensus second-team All-American (2008)"},
+        {"name": "2× First-team All-SoCon (2008–2009)"},
+        {"name": "2× SoCon Conference Tournament Most Outstanding Player (2007-2008)"},
+        {"name": "3× SoCon first-team All-Tournament (2007–2009)"},
+        {"name": "SoCon Freshman of the Year (2007)"},
+        {"name": "SoCon All-Freshmen Team (2007)"}
+      ]
+    },
+    {
+      "name": "College Records",
+      "children": [
+        {"name": "NCAA Division I scoring leader (2009)"},
+        {"name": "Single-season NCAA 3-point field goals (162, 2007–08)"},
+        {"name": "Single-season NCAA freshman 3-point field goals (122, 2006–07)"}
+      ]
+    },
+    {
+      "name": "Davidson College Records",
+      "children": [
+        {"name": "All-time leading scorer in Davidson College history (2,635)"},
+        {"name": "All-time Davidson College leader in 3-point field-goals made (414)"},
+        {"name": "All-time Davidson College leader in 30-point games (30)"},
+        {"name": "All-time Davidson College leader in 40-point games (6)"},
+        {"name": "Single-season Davidson College points (974, 2008–09)"},
+        {"name": "Single-season Davidson College steals (86, 2008–09)"},
+        {"name": "Single-season Davidson College freshman points (730, 2006–07)"}
+      ]
+    }
+  ]
+}

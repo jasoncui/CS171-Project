@@ -531,18 +531,18 @@ body {
 }
 
 .node circle {
-    fill: #fff;
-    stroke: steelblue;
-    stroke-width: 3px;
+    fill: #FFD700;
+    stroke: #006BB6;
+    stroke-width: 2px;
 }
 
 .node text {
-    font: 12px sans-serif;
+    font: 10px sans-serif;
 }
 
 .link {
     fill: none;
-    stroke: #ccc;
+    stroke: #FFD700;
     stroke-width: 2px;
 }
 
