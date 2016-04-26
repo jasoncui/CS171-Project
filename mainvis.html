@@ -130,18 +130,21 @@
         </div>
     </section>
 
-    <section id="college" class="visualizations">
+    <section id="college" class="college1">
         <div class="container">
             <div class="row">
-                    <h2 class="section-heading bio-intro" id="blue-highlight">College Career</h2>
-                    <p>Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="blue-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+                    <h2 class="section-heading bio-intro" id="yellow-highlight">College Career</h2>
+                    <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
             </div>
+
             <div style="text-align:center">
                 <div id="multiple_bar"></div>
             </div>
+
             <div style="text-align:center; margin-top: 20px;">
                 <div id="table_div"></div>
             </div>
+            <!--
             <div class="user-control">
                 <select id="area" class="form-control" onchange="dataManipulation()">
                     <option value="all">All Cities</option>
@@ -164,7 +167,7 @@
                 <div id="college-tree"></div>
             </div>
         </div>
-        <!--
+
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -195,6 +198,63 @@
             </div>
         </div>
         -->
+    </section>
+
+    <section class="college2">
+        <div class="container">
+            <div class="row">
+            <div class="user-control">
+                <select id="area" class="form-control" onchange="dataManipulation()">
+                    <option value="all">All Cities</option>
+                    <option value="Boston">Boston</option>
+                    <option value="Cambridge">Cambridge</option>
+                    <option value="Somerville">Somerville</option>
+                </select>
+            </div>
+            <div class="row text-center">
+                <div class="col-xs-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+                    <div id="bar1"></div>
+                    <p id="blue-highlight">Blah blah blah blah blah blah blah blah blah blah.</p>
+                </div>
+                <div class="col-xs-6">
+                    <div id="bar2"></div>
+                    <p id="blue-highlight">Blah blah blah blah blah blah blah blah blah blah.</p>
+                </div>
+            </div>
+            <div style="text-align:center">
+                <div id="college-tree"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Viz 1</h2>
+                    <div> Sort by:</div>
+                    <div class = "select-box" id = "select-box"></div>
+                    <div class = "chart" id= "chart-area-career" color="white"></div>
+
+                    <h2 class="section-heading">Viz 2</h2>
+                    <div class = "chart" id= "chart-area-college" color="white"></div>
+
+                    <div> Sort by:</div>
+                    <div class = "select-box" id = "select-box-college"></div>
+
+                    <h2 class="section-heading">Viz 3</h2>
+                    <div class = "chart" id= "tree" color="white"></div>
+
+                    <h2 class="section-heading">Viz 4</h2>
+                    <div class = "chart" id= "pie" color="white"></div>
+
+                    <h2 class="section-heading">Shot Chart</h2>
+                    <p class='center' id='shot-chart'></p>
+
+                    <h2 class="section-heading bio-intro" id="blue-highlight" >Golden State Warriors Stats Distribution</h2>
+                    <p>Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="blue-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+                    <div class='center' id='college-vis'></div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <section class="bg-primary" id="warriors">

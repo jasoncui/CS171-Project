@@ -15,6 +15,13 @@
 }
 
 
+.box {
+    background-color: rgba(0, 0, 0, 0.47);
+    color: #eee;
+    padding: 15px 15px 15px 15px;
+    width: 100%;
+}
+
 
 html,
 body {
@@ -68,8 +75,16 @@ p {
     background-color: #006BB6;
 }
 
-.visualizations {
-    background-color: #fff;
+.college1 {
+    /* background-color: #fff; */
+    background-image: url(../img/curry_background.jpg);
+    background-position: center;
+}
+
+.college2 {
+    /* background-color: #fff; */
+    background-image: url(../img/curry_davidson2.jpg);
+    background-position: center;
 }
 
 .bg-dark {
