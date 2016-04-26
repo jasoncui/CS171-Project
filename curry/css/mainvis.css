@@ -649,13 +649,11 @@ div.tooltip {
     margin: -1px 0 0 0;
     top: 100%;
     left: 0;
-
+*/
 .space-at-bottom {
     margin-bottom: 30px;
 }
 
-<<<<<<< Updated upstream
-*/
 
 
 /* d3-tip */
@@ -720,11 +718,9 @@ div.tooltip {
     display: none;
 }
 
-=======
 .form-control {
     width: 40%;
     margin: 0 auto;
     float: none;
     margin-top: 20px;
 }
->>>>>>> Stashed changes
