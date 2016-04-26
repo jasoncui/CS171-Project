@@ -65,9 +65,10 @@ function update(source) {
 
     nodeEnter.append("text")
         .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
-        .attr("dy", ".35em")
+        .attr("dy", "-1em")
         .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
         .text(function(d) { return d.name; })
+        .style("font-size", "15px")
         .style("fill-opacity", 1e-6);
 
     // Transition nodes to their new position.
@@ -125,6 +126,17 @@ function update(source) {
         d.x0 = d.x;
         d.y0 = d.y;
     });
+
+    college_tree_svg.append("text")
+        .attr("x", -0)
+        .attr("y", 0 - (margin.top / 2) + 30)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .style("font-style", "italic")
+        .text("College Career Records and Awards");
+
+    college_tree_svg.selectAll("text")
+        .style("fill", "white");
 }
 
 // Toggle children on click.
