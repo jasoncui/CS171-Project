@@ -537,7 +537,7 @@ body {
 }
 
 .node text {
-    font: 10px sans-serif;
+    font: 10px "Roboto Condensed";
 }
 
 .link {
