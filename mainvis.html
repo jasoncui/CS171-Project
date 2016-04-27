@@ -136,18 +136,39 @@
                     <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
             </div>
 
+            <div class="row box space-at-bottom">
+                <div class="col-md-4">
+                    <h2 id="yellow-highlight" class="text-center">Threes</h2>
+                    <i class="text-faded">In his three college seasons, Curry made 414/1004 threes for a shooting percentage of 41.2%.</i>
+                    <div id="collegePie1" class="wow fadeIn" data-wow-delay="0.5s"></div>
+                </div>
+                <div class="col-md-4">
+                    <h2 id="yellow-highlight" class="text-center">Field Goals</h2>
+                    <i class="text-faded">Curry made 871/1866 field goals, for a shooting percentage of 46.7%.</i>
+                    <div id="collegePie3" class="wow fadeIn" data-wow-delay="0.6s"></div>
+                </div>
+                <div class="col-md-4">
+                    <h2 id="yellow-highlight" class="text-center">Free Throws</h2>
+                    <i class="text-faded">Curry made 479/547 free throws, for a shooting percentage of 87.6%. </i>
+                    <div id="collegePie2" class="wow fadeIn" data-wow-delay="0.7s"></div>
+                </div>
+                <p>Early on, we can already see that Curry shows signs of being an exceptional shooter. At the time of this article's writing, the 2015-16 league averages for threes, field goals, and free throws, are <span id="yellow-highlight">35.4%, 45.2%, and 75.7%</span> respectively. Curry already surpasses all three statistics just in his college seasons. In his 06-07 season Curry ranked 3rd in three pointers (130), and <span id="yellow-highlight">in his 07-08 season Curry ranked 1st in three pointers (162)</span>.</p>
+            </div>
+            <!--
             <div style="text-align:center" class="box space-at-bottom">
                 <div id="multiple-bar"></div>
             </div>
+            -->
 
             <div class="row">
                 <div class="col-xs-6 space-at-bottom text-center" style="padding-right:20px; border-right: 1px solid #ccc;">
                     <div class="box">
                         <h2 id="yellow-highlight" class="text-center">College Shot Data</h2>
+                        <i class="text-faded">Click on different types of graphs below to toggle between visualizations.</i>
                         <div class="btn-group college-shot-data-buttons">
-                            <button type="button" class="btn btn-primary" onclick="toggleLine()">Line Chart</button>
-                            <button type="button" class="btn btn-primary" onclick="toggleArea()">Area Chart</button>
-                            <button type="button" class="btn btn-primary" onclick="togglePie()">Pie Chart</button>
+                            <button type="button" class="btn btn-primary" onclick="toggleLine1()">Line Chart</button>
+                            <button type="button" class="btn btn-primary" onclick="toggleArea1()">Area Chart</button>
+                            <button type="button" class="btn btn-primary" onclick="togglePie1()">Pie Chart</button>
                         </div>
                         <div id="college-line1"></div>
                     </div>
@@ -165,15 +186,20 @@
                         <p class="text-secondary">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </p>
                     </div>
                 </div>
-                <div class="col-xs-6">
+                <div class="col-xs-6 text-center">
                     <div class="box">
-                        <h2 id="yellow-highlight" class="text-center">Other College Stats</h2>
+                        <h2 id="yellow-highlight">Other College Stats</h2>
+                        <i class="text-faded">Click on different types of graphs below to toggle between visualizations.</i>
+                        <div class="btn-group college-shot-data-buttons">
+                            <button type="button" class="btn btn-primary" onclick="toggleLine2()">Line Chart</button>
+                            <button type="button" class="btn btn-primary" onclick="toggleArea2()">Area Chart</button>
+                            <button type="button" class="btn btn-primary" onclick="togglePie2()">Pie Chart</button>
+                        </div>
                         <div id="college-line2"></div>
                     </div>
                 </div>
             </div>
-
-            <div style="text-align:center">
+            <div style="text-align:center" class="space-at-top">
                 <div id="college-tree" class="box"></div>
             </div>
 
@@ -249,9 +275,6 @@
                     <div id="bar2"></div>
                     <p id="blue-highlight">Blah blah blah blah blah blah blah blah blah blah.</p>
                 </div>
-            </div>
-            <div style="text-align:center">
-                <div id="college-tree" class="box"></div>
             </div>
         </div>
 
@@ -395,6 +418,7 @@
     <script src="curry/js/d3.chart.defaults.js"></script>
     <script src="curry/js/d3.basketball-shot-chart.js"></script>
     <script src="curry/js/c3.min.js"></script>
+    <script src="curry/js/d3pie.min.js"></script>
 
     <script src="curry/js/bar.js"></script>
     <script src="curry/js/collegeVis.js"></script>
@@ -407,6 +431,7 @@
     <script src="curry/js/collegeGroupVis.js"></script>
     <script src="curry/js/collegeTree.js"></script>
     <script src="curry/js/college-line.js"></script>
+    <script src="curry/js/college-pies.js"></script>
 
     <!--
     <script src="curry/js/career.js"></script>

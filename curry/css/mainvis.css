@@ -665,8 +665,13 @@ div.tooltip {
     top: 100%;
     left: 0;
 */
+
 .space-at-bottom {
     margin-bottom: 30px;
+}
+
+.space-at-top {
+    margin-top: 30px;
 }
 
 .text-below-graph {
