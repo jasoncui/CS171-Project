@@ -1,5 +1,8 @@
 var chart1 = c3.generate({
     bindto: '#college-line1',
+    size: {
+        height: 240
+    },
     data: {
         x: 'x',
         columns: [
