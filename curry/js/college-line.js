@@ -11,6 +11,18 @@ var chart1 = c3.generate({
     }
 });
 
+function toggleLine() {
+    chart1.transform('line');
+}
+
+function toggleArea() {
+    chart1.transform('area-spline');
+}
+
+function togglePie() {
+    chart1.transform('pie');
+}
+
 var chart2 = c3.generate({
     bindto: '#college-line2',
     data: {

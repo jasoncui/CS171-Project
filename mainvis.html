@@ -140,12 +140,15 @@
                 <div id="multiple-bar"></div>
             </div>
 
-            <p class="text-secondary box">More text. More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.</p>
-
             <div class="row">
-                <div class="col-xs-6 space-at-bottom" style="padding-right:20px; border-right: 1px solid #ccc;">
+                <div class="col-xs-6 space-at-bottom text-center" style="padding-right:20px; border-right: 1px solid #ccc;">
                     <div class="box">
                         <h2 id="yellow-highlight" class="text-center">College Shot Data</h2>
+                        <div class="btn-group college-shot-data-buttons">
+                            <button type="button" class="btn btn-primary" onclick="toggleLine()">Line Chart</button>
+                            <button type="button" class="btn btn-primary" onclick="toggleArea()">Area Chart</button>
+                            <button type="button" class="btn btn-primary" onclick="togglePie()">Pie Chart</button>
+                        </div>
                         <div id="college-line1"></div>
                     </div>
                 </div>
