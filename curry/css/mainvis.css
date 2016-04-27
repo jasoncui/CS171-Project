@@ -669,6 +669,10 @@ div.tooltip {
     margin-bottom: 30px;
 }
 
+.text-below-graph {
+    margin-top: 20px;
+}
+
 
 
 /* d3-tip */
@@ -738,4 +742,55 @@ div.tooltip {
     margin: 0 auto;
     float: none;
     margin-top: 20px;
+}
+
+/* c3 css stuff */
+.c3-axis {
+  fill: #FFF;
+    font-family: "Roboto Condensed";
+}
+
+.c3-legend-item text {
+    fill: #FFF;
+    font-family: "Roboto Condensed";
+}
+
+.c3-tooltip {
+    color: #000
+}
+
+.c3 .c3-axis path, .c3 .c3-axis line {
+    stroke: #FFF;
+}
+
+#college-line1 .c3-line-Threes {
+    stroke-width: 2px;
+}
+
+#college-line1 .c3-line-Free-Throws {
+    stroke-width: 2px;
+}
+
+#college-line1 .c3-line-Field-Goals {
+    stroke-width: 2px;
+}
+
+#college-line2 .c3-line-Rebounds {
+    stroke-width: 2px;
+}
+
+#college-line2 .c3-line-Assists {
+    stroke-width: 2px;
+}
+
+#college-line2 .c3-line-Steals {
+    stroke-width: 2px;
+}
+
+#college-line2 .c3-line-Blocks {
+    stroke-width: 2px;
+}
+
+#college-line2 .c3-line-Turnovers {
+    stroke-width: 2px;
 }
