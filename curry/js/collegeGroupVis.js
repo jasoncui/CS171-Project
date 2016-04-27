@@ -17,6 +17,7 @@ var multiple_bar_xAxis = d3.svg.axis()
     .scale(multiple_bar_x)
     .orient("bottom");
 
+// not actually used because heights are too small
 var multiple_bar_yAxis = d3.svg.axis()
     .scale(multiple_bar_y)
     .orient("left")
@@ -26,15 +27,15 @@ var multiple_bar_tip = d3.tip()
     .attr('class', 'd3-tip')
     .offset([-10, 0])
     .html(function(d) {
-        return "<strong>" + d.country + "\t" + d.year + "</strong><br/><span style='color:#fff'>" + d.percent*100 + "%</span>";
-    })
+        return "<strong>" + d.shot + "\t" + d.year + "</strong><br/><span style='color:#fff'>" + d.percent*100 + "%</span>";
+    });
 
 // csv loaded asynchronously
 d3.tsv("curry/data/multiple_bar_data.tsv", type, function(data) {
 
-    // Data is nested by country
-    var countries = d3.nest()
-        .key(function(d) { return d.country; })
+    // Data is nested by shot
+    var shots = d3.nest()
+        .key(function(d) { return d.shot; })
         .entries(data);
 
     // Parse dates and numbers. We assume values are sorted by date.
@@ -46,11 +47,11 @@ d3.tsv("curry/data/multiple_bar_data.tsv", type, function(data) {
 
     // Compute the minimum and maximum year and percent across symbols.
     multiple_bar_x.domain(data.map(function(d) { return d.year; }));
-    multiple_bar_y.domain([0, d3.max(countries, function(s) { return s.values[0].percent; })]);
+    multiple_bar_y.domain([0, d3.max(shots, function(s) { return s.values[0].percent; })]);
 
-    // Add an SVG element for each country, with the desired dimensions and multiple_bar_margin.
-    var multiple_bar_svg = d3.select("#multiple_bar").selectAll("svg")
-        .data(countries)
+    // Add an SVG element for each shot, with the desired dimensions and multiple_bar_margin.
+    var multiple_bar_svg = d3.select("#multiple-bar").selectAll("svg")
+        .data(shots)
         .enter()
         .append("svg:svg")
         .attr("width", multiple_bar_width + multiple_bar_margin.left + multiple_bar_margin.right)
@@ -73,7 +74,7 @@ d3.tsv("curry/data/multiple_bar_data.tsv", type, function(data) {
         .attr("dy", ".71em")
         .attr("text-anchor", "start")
         .attr("font-size", "1.1em")
-        .style("fill", "#006BB6")
+        .style("fill", "#FFD700")
         .text(function(d) { return d.key});
 
     // Accessing nested data: https://groups.google.com/forum/#!topic/d3-js/kummm9mS4EA
@@ -93,6 +94,9 @@ d3.tsv("curry/data/multiple_bar_data.tsv", type, function(data) {
         .on('mouseout', multiple_bar_tip.hide)
 
     multiple_bar_svg.call(multiple_bar_tip);
+
+    multiple_bar_svg.selectAll("text")
+        .style("fill", "#006BB6");
 
 
 });

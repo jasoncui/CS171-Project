@@ -1,4 +1,3 @@
-
 var college_tree_margin = {top: 20, right: 120, bottom: 20, left: 120},
     college_tree_width = 960 - college_tree_margin.right - college_tree_margin.left,
     college_tree_height = 500 - college_tree_margin.top - college_tree_margin.bottom;
@@ -19,7 +18,8 @@ var college_tree_svg = d3.select("#college-tree").append("svg")
     .append("g")
     .attr("transform", "translate(" + college_tree_margin.left + "," + college_tree_margin.top + ")");
 
-d3.json("curry/data/collegeTree.json", function(error, flare) {
+// pull data from college_tree.json
+d3.json("curry/data/college_tree.json", function(error, flare) {
     if (error) throw error;
 
     root = flare;
@@ -65,9 +65,10 @@ function update(source) {
 
     nodeEnter.append("text")
         .attr("x", function(d) { return d.children || d._children ? -10 : 10; })
-        .attr("dy", ".35em")
+        .attr("dy", "-1em")
         .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
         .text(function(d) { return d.name; })
+        .style("font-size", "15px")
         .style("fill-opacity", 1e-6);
 
     // Transition nodes to their new position.
@@ -125,6 +126,17 @@ function update(source) {
         d.x0 = d.x;
         d.y0 = d.y;
     });
+
+    college_tree_svg.append("text")
+        .attr("x", -0)
+        .attr("y", 0 - (margin.top / 2) + 30)
+        .attr("text-anchor", "middle")
+        .style("font-size", "16px")
+        .style("font-style", "italic")
+        .text("College Career Records and Awards");
+
+    college_tree_svg.selectAll("text")
+        .style("fill", "white");
 }
 
 // Toggle children on click.

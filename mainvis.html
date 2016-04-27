@@ -17,7 +17,6 @@
     <!-- Custom Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="curry/font-awesome/css/font-awesome.min.css" type="text/css">
 
     <!-- Plugin CSS -->
@@ -25,8 +24,8 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="curry/css/mainvis.css" type="text/css">
-     
     <link type="text/css" rel="stylesheet" href="curry/css/radar-chart.css"></link>
+    <link href="curry/css/c3.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -39,7 +38,7 @@
 
 <body id="page-top">
 
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -77,7 +76,7 @@
     <header>
         <div class="header-content">
             <div class="header-content-inner">
-                <h1>The Meteoric Rise of Stephen Cho</h1>
+                <h1>The Meteoric Rise of Stephen Curry</h1>
                 <p>Track the epic saga from college to present of one of the game's greatest shooters of all time.</p>
                 <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
             </div>
@@ -89,7 +88,7 @@
             <div class="row">
                     <h2 class="section-heading wow bounceIn bio-intro">Wardell Stephen Curry.</h2>
                     <p class="text-faded">
-                        Wardell Stephen "Steph" Curry II (born March 14, 1988) is an American professional basketball player for the Golden State Warriors of the                            National Basketball Association (NBA). Many basketball players have called him the <span id="yellow-highlight">greatest shooter in NBA          history</span>. In 2015, Curry won the <span id="yellow-highlight">NBA Most Valuable Player Award</span> and led the Warriors to their first championship since 1975. In 2016, he led his team to the <span id="yellow-highlight">most wins in an NBA season</span>.
+                        Wardell Stephen "Steph" Curry II (born March 14, 1988) is an American professional basketball player for the Golden State Warriors of the National Basketball Association (NBA). Many basketball players have called him the <span id="yellow-highlight">greatest shooter in NBA          history</span>. In 2015, Curry won the <span id="yellow-highlight">NBA Most Valuable Player Award</span> and led the Warriors to their first championship since 1975. In 2016, he led his team to the <span id="yellow-highlight">most wins in an NBA season</span>.
                     </p>
                     <p class="text-faded">
                         Curry is the son of former NBA player Dell and older brother of current NBA player Seth. He played college basketball for Davidson. There, he was twice named Southern Conference Player of the Year and set the all-time scoring record for both Davidson and the Southern Conference. During his sophomore year, he also set the single-season NCAA record for three-pointers made.
@@ -130,18 +129,53 @@
         </div>
     </section>
 
-    <section id="college" class="visualizations">
+    <section id="college" class="college1">
         <div class="container">
             <div class="row">
-                    <h2 class="section-heading bio-intro" id="blue-highlight">College Career</h2>
-                    <p>Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="blue-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+                    <h2 class="section-heading wow bounceIn bio-intro" id="yellow-highlight">College Career</h2>
+                    <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
             </div>
+
+            <div style="text-align:center" class="box space-at-bottom">
+                <div id="multiple-bar"></div>
+            </div>
+
+            <p class="text-secondary box">More text. More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.More text.</p>
+
+            <div class="row">
+                <div class="col-xs-6 space-at-bottom" style="padding-right:20px; border-right: 1px solid #ccc;">
+                    <div class="box">
+                        <h2 id="yellow-highlight" class="text-center">College Shot Data</h2>
+                        <div id="college-line1"></div>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="box">
+                        <p class="text-secondary">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text  </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 space-at-bottom" style="padding-right:20px; border-right: 1px solid #ccc;">
+                    <div class="box">
+                        <p class="text-secondary">Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text Text </p>
+                    </div>
+                </div>
+                <div class="col-xs-6">
+                    <div class="box">
+                        <h2 id="yellow-highlight" class="text-center">Other College Stats</h2>
+                        <div id="college-line2"></div>
+                    </div>
+                </div>
+            </div>
+
             <div style="text-align:center">
-                <div id="multiple_bar"></div>
+                <div id="college-tree" class="box"></div>
             </div>
-            <div style="text-align:center; margin-top: 20px;">
-                <div id="table_div"></div>
-            </div>
+
+
+            <!--
             <div class="user-control">
                 <select id="area" class="form-control" onchange="dataManipulation()">
                     <option value="all">All Cities</option>
@@ -160,14 +194,10 @@
                     <p id="blue-highlight">Blah blah blah blah blah blah blah blah blah blah.</p>
                 </div>
             </div>
-            <div style="text-align:center">
-                <div id="college-tree"></div>
-            </div>
         </div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <!--
                     <h2 class="section-heading">Viz 1</h2>
                     <div> Sort by:</div>
                     <div class = "select-box" id = "select-box"></div>
@@ -190,6 +220,61 @@
 
                     -->
                     <h2 class="section-heading bio-intro" id="blue-highlight" >Golden State Warriors Stats Distribution</h2>
+                    <div class='center' id='college-vis'></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="college2">
+        <div class="container">
+            <div class="row">
+            <div class="user-control">
+                <select id="area" class="form-control" onchange="dataManipulation()">
+                    <option value="all">All Cities</option>
+                    <option value="Boston">Boston</option>
+                    <option value="Cambridge">Cambridge</option>
+                    <option value="Somerville">Somerville</option>
+                </select>
+            </div>
+            <div class="row text-center">
+                <div class="col-xs-6" style="padding-right:20px; border-right: 1px solid #ccc;">
+                    <div id="bar1"></div>
+                    <p id="blue-highlight">Blah blah blah blah blah blah blah blah blah blah.</p>
+                </div>
+                <div class="col-xs-6">
+                    <div id="bar2"></div>
+                    <p id="blue-highlight">Blah blah blah blah blah blah blah blah blah blah.</p>
+                </div>
+            </div>
+            <div style="text-align:center">
+                <div id="college-tree" class="box"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Viz 1</h2>
+                    <div> Sort by:</div>
+                    <div class = "select-box" id = "select-box"></div>
+                    <div class = "chart" id= "chart-area-career" color="white"></div>
+
+                    <h2 class="section-heading">Viz 2</h2>
+                    <div class = "chart" id= "chart-area-college" color="white"></div>
+
+                    <div> Sort by:</div>
+                    <div class = "select-box" id = "select-box-college"></div>
+
+                    <h2 class="section-heading">Viz 3</h2>
+                    <div class = "chart" id= "tree" color="white"></div>
+
+                    <h2 class="section-heading">Viz 4</h2>
+                    <div class = "chart" id= "pie" color="white"></div>
+
+                    <h2 class="section-heading">Shot Chart</h2>
+                    <p class='center' id='shot-chart'></p>
+
                     <div class='center' id='college-vis'></div>
                 </div>
             </div>
@@ -306,6 +391,7 @@
     <script src="curry/js/d3.chart.js"></script>
     <script src="curry/js/d3.chart.defaults.js"></script>
     <script src="curry/js/d3.basketball-shot-chart.js"></script>
+    <script src="curry/js/c3.min.js"></script>
 
     <script src="curry/js/bar.js"></script>
     <script src="curry/js/collegeVis.js"></script>
@@ -313,14 +399,16 @@
     <script type="text/javascript" src="curry/js/d3.tip.v0.6.3.js"></script>
     <script type="text/javascript" src="curry/js/pieee.js"></script>
     <script src="curry/js/chart.js"></script>
+
+    <!-- Visualizations for college section -->
     <script src="curry/js/collegeGroupVis.js"></script>
     <script src="curry/js/collegeTree.js"></script>
+    <script src="curry/js/college-line.js"></script>
 
     <!--
     <script src="curry/js/career.js"></script>
     <script src="curry/js/college.js"></script>
     <script src="curry/js/tree.js"></script>
-    <script src="curry/js/pie.js"></script>
     <script src="curry/js/shot-chart.js"></script>
     -->
 
