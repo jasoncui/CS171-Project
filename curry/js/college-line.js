@@ -13,6 +13,9 @@ var chart1 = c3.generate({
 
 var chart2 = c3.generate({
     bindto: '#college-line2',
+    size: {
+        height: 240
+    },
     data: {
         x: 'x',
         columns: [

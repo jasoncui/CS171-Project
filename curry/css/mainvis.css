@@ -79,12 +79,14 @@ p {
     /* background-color: #fff; */
     background-image: url(../img/curry_davidson.jpg);
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .college2 {
     /* background-color: #fff; */
     background-image: url(../img/curry_davidson2.jpg);
-    background-position: center;
+    background-position: center
+    background-repeat: no-repeat;
 }
 
 .bg-dark {
@@ -373,7 +375,7 @@ header .header-content .header-content-inner p {
 }
 
 .call-to-action h2 {
-    margin: 0 auto 20px;
+    margin: 0 auto;
 }
 
 .text-primary {
