@@ -1,6 +1,6 @@
 //Width and height for whole
 var w = 1024;
-var h = 768;
+var h = 608;
 
 //image width and height
 var image_w = 200;
@@ -34,7 +34,7 @@ var Scale = d3.scale.linear()
     .range([2, 20]);
 
 //Create SVG element
-var svg_p = d3.select("#college-vis")
+var svg_p = d3.select("#map-pie")
     .append("svg")
     .attr("width", w)
     .attr("height", h)
