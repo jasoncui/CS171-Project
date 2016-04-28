@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4c8a35-3b5a-4af5-a3b2-54a4395495e0" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/curry/js/pieee.js" afterPath="$PROJECT_DIR$/curry/js/warriors-map-pie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curry/css/mainvis.css" afterPath="$PROJECT_DIR$/curry/css/mainvis.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainvis.html" afterPath="$PROJECT_DIR$/mainvis.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/piecharts.html" afterPath="$PROJECT_DIR$/piecharts.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curry/js/warriors-map-pie.js" afterPath="$PROJECT_DIR$/curry/js/warriors-map-pie.js" />
     </list>
     <ignored path="Curry Test 1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,10 +33,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainvis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35964912">
+            <state vertical-scroll-proportion="-4.1">
               <caret line="289" column="79" selection-start-line="289" selection-start-column="79" selection-end-line="289" selection-end-column="79" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -52,13 +48,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="warriors-map-pie.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="warriors-map-pie.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/curry/js/warriors-map-pie.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.048387095">
+              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
               <folding>
-                <marker date="1461804818000" expanded="true" signature="21172:21181" placeholder="..." />
+                <marker date="1461812960000" expanded="true" signature="21172:21181" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -126,9 +122,9 @@
         <option value="$PROJECT_DIR$/curry/js/college-line.js" />
         <option value="$PROJECT_DIR$/curry/js/college-timeline.js" />
         <option value="$PROJECT_DIR$/curry/js/college-tree.js" />
-        <option value="$PROJECT_DIR$/curry/js/warriors-map-pie.js" />
         <option value="$PROJECT_DIR$/curry/css/mainvis.css" />
         <option value="$PROJECT_DIR$/mainvis.html" />
+        <option value="$PROJECT_DIR$/curry/js/warriors-map-pie.js" />
       </list>
     </option>
   </component>
@@ -748,25 +744,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curry/js/warriors-map-pie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="31" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
-          <folding>
-            <marker date="1461804818000" expanded="true" signature="21172:21181" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainvis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35964912">
+        <state vertical-scroll-proportion="-4.1">
           <caret line="289" column="79" selection-start-line="289" selection-start-column="79" selection-end-line="289" selection-end-column="79" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#aside#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curry/js/warriors-map-pie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.048387095">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding>
+            <marker date="1461812960000" expanded="true" signature="21172:21181" placeholder="..." />
           </folding>
         </state>
       </provider>

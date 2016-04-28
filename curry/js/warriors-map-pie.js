@@ -1,6 +1,6 @@
 //Width and height for whole
 var w = 1024;
-var h = 608;
+var h = 620;
 
 //image width and height
 var image_w = 200;
