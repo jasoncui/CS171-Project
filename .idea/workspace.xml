@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4c8a35-3b5a-4af5-a3b2-54a4395495e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curry/js/college-tree.js" afterPath="$PROJECT_DIR$/curry/js/college-tree.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainvis.html" afterPath="$PROJECT_DIR$/mainvis.html" />
     </list>
     <ignored path="Curry Test 1.iws" />
@@ -37,8 +36,8 @@
       <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainvis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.81578946">
-              <caret line="266" column="86" selection-start-line="266" selection-start-column="86" selection-end-line="266" selection-end-column="86" />
+            <state vertical-scroll-proportion="0.30701753">
+              <caret line="288" column="150" selection-start-line="288" selection-start-column="150" selection-end-line="288" selection-end-column="150" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -741,8 +740,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mainvis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.81578946">
-          <caret line="266" column="86" selection-start-line="266" selection-start-column="86" selection-end-line="266" selection-end-column="86" />
+        <state vertical-scroll-proportion="0.30701753">
+          <caret line="288" column="150" selection-start-line="288" selection-start-column="150" selection-end-line="288" selection-end-column="150" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
