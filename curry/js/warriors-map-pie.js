@@ -1,25 +1,18 @@
 //Width and height for whole
-var w = 1024;
-var h = 620;
+var w = 524;
+var h = 600;
 
 //image width and height
-var image_w = 200;
-var image_h = 200;
+var image_w = 100;
+var image_h = 100;
 
 //For selected node
 var active = d3.select(null);
 
 //Define map projection
 var projection = d3.geo.albersUsa()
-    .translate([w/3, h/3.5])
-    .scale([900]);
-
-//Zoom behavior
-var zoom = d3.behavior.zoom()
-    .translate([0, 0])
-    .scale(1)
-    .scaleExtent([1, 8])
-    .on("zoom", zoomed);
+    .translate([w/3 + 80, h/3.5])
+    .scale([600]);
 
 //Define path generator
 var path = d3.geo.path()
@@ -42,22 +35,20 @@ var svg_p = d3.select("#map-pie")
 
 //Creater a group to store states
 var g = svg_p.append("g")
-    .attr("class","map");
+    .attr("class","map")
+    .attr("y", 100)
+    .attr("x", 100)
+    .attr("width", w)
+    .attr("height", h);
 
-//Enable to zoom
-g.call(zoom.event);
-//Allow free zooming
-//g.call(zoom); 
-    
+
 //Load in state data, draw the map
 d3.csv("curry/data/US-states.csv", function(data) {
     //Load in GeoJSON data
     d3.json("curry/data/US-geo.json", function(json) {
-        //Merge the EastorWest data and GeoJSON
-        //Loop through once for each EastorWest data value
         for (var i = 0; i < data.length; i++) {
-            var dataState = data[i].state;              //Grab state name
-            var dataValue = parseFloat(data[i].value);  //Grab data value, and convert from string to float
+            var dataState = data[i].state;            
+            var dataValue = parseFloat(data[i].value);  
             var dataEASTorWEST = data[i].EASTorWEST;
             //Find the corresponding state inside the GeoJSON
             for (var j = 0; j < json.features.length; j++) {
@@ -70,7 +61,6 @@ d3.csv("curry/data/US-states.csv", function(data) {
                 }
             }
         }
-
         //Bind data and create one path per GeoJSON feature
         g.selectAll("path")
             .data(json.features).enter()
@@ -80,10 +70,11 @@ d3.csv("curry/data/US-states.csv", function(data) {
             .attr("d", path)
             .attr("class", function(d) {
                 return d.properties.postal;})
+            .attr("width", width)
+            .attr("height", height)
             .style("fill", function(d) {
                 //Get data value
                 var EASTorWEST = d.properties.EASTorWEST;
-
                 if (EASTorWEST) {
                     //If value exists…
                     if (EASTorWEST == "East") {
@@ -95,23 +86,19 @@ d3.csv("curry/data/US-states.csv", function(data) {
                     //If value is undefined…
                     return "#CCCCCC";
                 }
-            })
-            .on("click", stateClick);
+            });
 
         //Load in NBA teams data
         d3.csv("curry/data/NBA-teams.csv", function(data) {
             console.log(data)
             //Map the rank to radius[2, 20] 
             Scale.domain([0, d3.max(data, function(d) { return d.winrate; })]);
-
             //Map the rank to opacity[0.3, 0.9] 
             Opacity.domain([0, d3.max(data, function(d) { return d.winrate; })]);
-
             //Map the winrate to fontsize[10, 20] 
             var FontSize = d3.scale.linear()
                 .domain([15, 1])
                 .range([10, 20]);
-
             //Create nodes group
             var nodes = g.selectAll("nodes")
                 .data(data)
@@ -123,12 +110,10 @@ d3.csv("curry/data/US-states.csv", function(data) {
                 .on("mouseover", nodeMouseover)
                 .on("mouseout", nodeMouseout);
 
-            
-            //Circles for teams
             nodes.append("circle")
                 .attr("class", function(d) { return d.abb })
                 .attr("r", function(d){
-                    return Scale(d.winrate);})
+                    return Scale(d.winrate/2);})
                 .style("fill", function(d){
                     if (d.EASTorWEST == "East") {
                         return "blue";
@@ -140,6 +125,16 @@ d3.csv("curry/data/US-states.csv", function(data) {
                     return Opacity(d.winrate);})
                 .style("cursor", "pointer")
                 .on("click", teamClick);
+
+            /*
+            d3.csv("curry/data/default-clicked-team.csv", function(data1) {
+               teamClick(data1[0]);
+               console.log(data1[0]);
+            });*/
+            //console.log(data[15]);
+            //teamClick(data[15]);
+            //teamList.push("Warriors");
+            // console.log(teamList);
             
             //Text for temm abbreviation
             nodes.append("text")
@@ -159,32 +154,6 @@ d3.csv("curry/data/US-states.csv", function(data) {
     });
 });
 
-//Craete the radar chart
-var radarChart = RadarChart.chart();
-//default config
-var defaultConfig = radarChart.config(); 
-//defaultConfig.w and defaultConfig.h is 600
-radarChart.config({w: 300, h: 300, levels: 4, maxValue: 100});
-//TeamData for Rader chart
-var teamRadarData = [];
-//List of teams
-var teamList = [];
-
-//Return the map of a team
-function teamDataset(teamRadarData) {
-    return teamRadarData.map(function(d) {
-        return {
-            className: d.className,
-            axes: d.axes.map(function(axis) {
-                return { axis: axis.axis, value: axis.value };})
-        };
-    });
-}
-
-//Regularize the rank, rank 1 to 30 points
-function regularizeRank(rank) {
-    return ((31 - rank) / 30 * 100).toFixed(1);
-}
 
 //Judge if is in the array
 function contains(array, obj) { 
@@ -213,8 +182,16 @@ Array.prototype.remove = function(val) {
     }
 };  
 
+//List of teams
+var teamList = [];
+
 //When click a Node
 function teamClick(d) {
+    console.log(teamList)
+    console.log(d)
+    console.log(d.lightColor)
+    console.log(d.darkColor)
+
     selectedTeamName = d.teamname;
     if (contains(teamList, selectedTeamName)) { //Contains the node
         //Restore the node color
@@ -226,15 +203,6 @@ function teamClick(d) {
                 return "red";
             };
         });
-
-        //Remove the selected team data
-        for (var i = 0; i < teamRadarData.length; i++) {
-            if (selectedTeamName == teamRadarData[i].className) {
-                teamRadarData.remove(teamRadarData[i]);
-                break;
-            };
-        }
-
         //Remove in the teamList;
         teamList.remove(selectedTeamName);
 
@@ -243,69 +211,50 @@ function teamClick(d) {
             d3.selectAll(".pie-chart").remove();
         } 
         if (teamList.length == 1) {
-            createPieChart();
+            createPieChart(d.teamname, d.lightColor,d.darkColor);
             d3.selectAll(".teamRadar").remove();
         }
         if  (teamList.length >= 2) {
             //renderRadarChart();
         }
     } else {    //Does not contain the node
+        teamList = []
         teamList.push(selectedTeamName);
+        d3.selectAll("circle").style("fill", function(d){
+                    if (d.EASTorWEST == "East") {
+                        return "blue";
+                    } else {
+                        return "red";
+                    };
+                })
         active = d3.select(this).style("fill", "orange");
-        if (teamList.length == 1) {
-            createPieChart();
-            //Push the team data for radar chart, but not display
-            d3.csv("curry/data/teamstats.csv", function(teamData) {
-                //Loop through once for each team data value
-                pushTeamRadarData(teamData);
-            });
-
-        }
-        if (teamList.length >= 2) {
-            //remove the pie chart
-            d3.selectAll(".pie-chart").remove();
-
-            //Push the team data for radar chart, draw but not display
-            d3.csv("curry/data/teamstats.csv", function(teamData) {
-                //Loop through once for each team data value
-                console.log(teamData)
-                pushTeamRadarData(teamData);
-                renderRadarChart();
-            });
-        }
+        createPieChart(d.teamname, d.lightColor,d.darkColor);
     }
 
-    //Push team data for radar chart
-    function pushTeamRadarData(teamData){
-        for (var i = 0; i < teamData.length; i++) { 
-            if (teamData[i].team == selectedTeamName) { //Grab the team
-                var teamAxes = [];
-                teamAxes.push({axis: "Points", value: regularizeRank(teamData[i].rPTS)});
-                teamAxes.push({axis: "Turnovers", value: regularizeRank(teamData[i].rTOV)});
-                teamAxes.push({axis: "Steals", value: regularizeRank(teamData[i].rSTL)});
-                teamAxes.push({axis: "Blocks", value: regularizeRank(teamData[i].rBLK)});
-                teamAxes.push({axis: "Rebounds", value: regularizeRank(teamData[i].rREB)});
-                teamAxes.push({axis: "Assists", value: regularizeRank(teamData[i].rAST)});
 
-                teamRadarData.push({className: teamData[i].team, axes: teamAxes});
-            }
-        }
-    }
 
-    //Create PieChart for players
-    function createPieChart() {
+
+//Create PieChart for players
+function createPieChart(teamname1,light,dark) {
+    console.log(light);
+    console.log(dark);
+
+        d3.select("#team-name")
+            .text(teamname1)
+            .attr("fill","white");
+
+
         d3.selectAll(".pie-chart").remove();
-
-        var width = 150;
-        var height = 500;
-        var radius = Math.min(width, height) / 2;
-        var innerRadius = 0.3 * radius;
-
+        var width = 250;
+        var height = 400;
+        var radius = Math.min(width, height) / 2 - 60;
+        var innerRadius = 0.3 * radius + 10;
         //Players' data in a team
         teamPlayer = [];
         //teamPlayerName for returning a color;
         teamPlayerName = [];
 
+        console.log(teamList)
         //Load each players' data
         d3.csv("curry/data/players.csv", function(error, playerData) {
             playerData.forEach(function(d) {
@@ -316,7 +265,6 @@ function teamClick(d) {
                 d.BLK = +d.BLK
                 d.STL = +d.STL
                 d.TOV = +d.TOV
-
                 //Save the selected team data
                 if (d.team == teamList[teamList.length - 1]) {
                     teamPlayer.push({
@@ -331,6 +279,8 @@ function teamClick(d) {
                         TOV: d.TOV
                     });
                     teamPlayerName.push(d.player);
+                    console.log("test")
+                    console.log(teamPlayer)
                 }
             });
 
@@ -344,24 +294,42 @@ function teamClick(d) {
 
             var tip = d3.tip()
                 .attr("class", "d3-tip pie-chart-tip")
-                .offset([0, -128])
-                .html(function(d) { return "<span>" + d.data.player + "</span>"; });;
+                .html(function(d) { return "<h6>" + d.data.player + "</h6>" + 
+                        "<span>Points: " + d.data.PTS + "<br>" + "Assists: " + d.data.AST+ "<br>" +
+                        "Blocks: " + d.data.BLK+ "<br>" + "Rebounds: " + d.data.REB+ "<br>" +
+                        "Steals: " + d.data.STL+ "<br>" + "Turnovers: " + d.data.TOV+ "</span>"; });;
 
             var outlineArc = d3.svg.arc()
                 .innerRadius(innerRadius)
                 .outerRadius(radius);
 
+            function tweenPie(finish) {
+                var start = {
+                        startAngle: 0,
+                        endAngle: 0
+                    };
+                var i = d3.interpolate(start, finish);
+                return function(d) { return arc(i(d)); };
+            }
+
             //Six pie charts
             for (var i = 0 ; i < 6; i++) {
                 var pie = d3.layout.pie().sort(null);
-                var arc = d3.svg.arc().innerRadius(innerRadius);
+                var arc = d3.svg.arc().innerRadius(innerRadius)
+                    .outerRadius(radius);
                 //In the center
-                var shortAttrName = ["PTS", "AST", "REB", "BLK", "STL", "TOV"];
+                var shortAttrName = ["Points", "Assists", "Rebounds", "Blokcks", "Steals", "Turnovers"];
                 //For the title when hover
                 var fullAttrName = ["Points", "Assists", "Rebounds", "Blokcks", "Steals", "Turnovers"];
 
+                pie_w = 200;
+                pie_h = 300;
+
+
                 var pieChart = svg_p.append("g")
                     .attr("class", "pie-chart")
+                    .attr("x", 100)
+                    .attr("y",100)
                     .attr("width", width)
                     .attr("height", height)
 
@@ -370,9 +338,9 @@ function teamClick(d) {
                 //position of the pie charts
                 pieChart.attr("class", "single-pie-chart").attr("transform", function() { 
                     if (i <= 2){
-                        return "translate(" + 770 + "," + (110 + i * 160) +")" ;
+                        return "translate(" + (100 + i * 160) + "," + 390 +")" ;
                     } else {
-                        return "translate(" + 930 + "," + (110 + (i - 3) * 160) +")" ;
+                        return "translate(" + (100 + (i-3) * 160) + "," + 530 +")" ;
                     }
                 });
 
@@ -382,59 +350,60 @@ function teamClick(d) {
                     .attr("dy", ".35em")
                     .attr("text-anchor", "middle") // text-align: right
                     .text(function() { return shortAttrName[i]; })
+                    .attr("fill", light)
                     .append("title")
                     .text(function() { return fullAttrName[i] })
                     .call(tip); 
 
+                console.log(i);
                 if (i == 0) { 
                     pie.value(function(d) { return d.PTS; });
-                    arc.outerRadius(function (d) { return (radius - innerRadius) * d.data.PTS / maxPlayerPTS + innerRadius; });
                 }
                 if (i == 1) { 
                     pie.value(function(d) { return d.AST; });
-                    arc.outerRadius(function (d) { return (radius - innerRadius) * d.data.AST / maxPlayerAST + innerRadius; });
                 }
                 if (i == 2) { 
                     pie.value(function(d) { return d.REB; }); 
-                    arc.outerRadius(function (d) { return (radius - innerRadius) * d.data.REB / maxPlayerREB + innerRadius; });
                 }
                 if (i == 3) { 
                     pie.value(function(d) { return d.BLK; }); 
-                    arc.outerRadius(function (d) { return (radius - innerRadius) * d.data.BLK / maxPlayerBLK + innerRadius; })
                 }
                 if (i == 4) {
                     pie.value(function(d) { return d.STL; }); 
-                    arc.outerRadius(function (d) { return (radius - innerRadius) * d.data.STL / maxPlayerSTL + innerRadius; })
                 }
                 if (i == 5) { 
                     pie.value(function(d) { return d.TOV; });
-                    arc.outerRadius(function (d) { return (radius - innerRadius) * d.data.TOV / maxPlayerTOV + innerRadius; });
                 }
 
                 var pieColor = d3.scale.linear()
                     .domain([0, 15])
-                    .range(["yellow", "green"])
+                    .range([dark])
                     .interpolate(d3.interpolateLab);
 
                 var path = pieChart.selectAll(".solidArc")
                     .data(pie(playerDataset(teamPlayer)))
                     .enter().append("path")
                     .attr("fill", function(d) { return pieColor(teamPlayerName.indexOf(d.data.player)); })
-                    .attr("class", "solidArc")
-                    .attr("stroke", "gray")
-                    .attr("d", arc)
+                    .attr("stroke", light)
+                    .attr("stroke-width", "0.5")
                     .on('mouseover', tip.show)
                     .on('mouseout', tip.hide)
-                    .append("title")
-                    .text(function(d){ return "Team: " + d.data.team; });
+                    .transition()
+                    .duration(1200)
+                    .attrTween('d', tweenPie)
+                    .attr("id", "pie-area");
 
                 var outerPath = pieChart.selectAll(".outlineArc")
                     .data(pie(playerDataset(teamPlayer)))
                     .enter().append("path")
                     .attr("fill", "none")
-                    .attr("stroke", "gray")
+                    .transition()
+                    .duration(1200)
+                    .attrTween('d', tweenPie)
+                    .attr("stroke", light)
+                    .attr("stroke-width", "1")
                     .attr("class", "outlineArc")
-                    .attr("d", outlineArc);  
+                    .attr("id", "pie-area");  
             }
         });
         
@@ -457,296 +426,7 @@ function teamClick(d) {
     }
 }
 
-//Draw radar chart
-function renderRadarChart() {
-    var teamRadar = svg_p.selectAll("g.teamRadar").data([teamDataset(teamRadarData)]);
-    teamRadar.enter().append("g").classed("teamRadar", 1);
-    teamRadar.attr("transform", "translate(645,100)").call(radarChart);
 
-    //Render the legend
-    renderLengend(teamList);
-}
-
-//Draw the lengend of the radar chart
-function renderLengend(teamList) {
-    var colorscale = d3.scale.category10();
-
-    //Initiate Legend   
-    var legend = svg_p.select(".teamRadar").selectAll("g.legend-tag").data(teamList).enter()
-        .append("g")
-        .attr("class", "legend-tag")
-        .attr("height", 100)
-        .attr("width", 200)
-        .attr("transform", "translate(285,0)") ;
-
-    //Create colour squares
-    legend.selectAll("rect").data(teamList).enter()
-        .append("rect")
-        .attr("x", 0)
-        .attr("y", function(d, i){ return i * 20;})
-        .attr("width", 10)
-        .attr("height", 10)
-        .style("fill", function(d, i){ return colorscale(i);});
-
-    //Create text next to squares
-    legend.selectAll(".legend-team").data(teamList).enter()
-        .append("text")
-        .attr("class", "legend-team")
-        .attr("x", 12)
-        .attr("y", function(d, i){ return i * 20 + 9;})
-        .attr("font-size", "10px")
-        .attr("fill", "#737373")
-        .text(function(d) { return d; }); 
-}
-
-//Click button to show
-function createStackBar() {
-    d3.selectAll(".stack-bar").remove();
-    d3.selectAll(".bar-option").style("display", "inline");
-    svg_p.selectAll(".pie-chart").style("display","none");
-
-    //Coefficient of the weights
-    var ptsWeight = parseInt(document.getElementById("pts-weight").value);
-    var astWeight = parseInt(document.getElementById("ast-weight").value);
-    var rebWeight = parseInt(document.getElementById("reb-weight").value);
-    var tovWeight = parseInt(document.getElementById("tov-weight").value);
-    var stlWeight = parseInt(document.getElementById("stl-weight").value);
-    var blkWeight = parseInt(document.getElementById("blk-weight").value);
-
-    var stackBarMargin = {top: 10, right: 20, bottom: 20, left: 60};
-    var stackBarWidth = 950 - stackBarMargin.left - stackBarMargin.right;
-    var stackBarHeight = 300 - stackBarMargin.top - stackBarMargin.bottom;
-
-    var barY0 = d3.scale.ordinal()
-        .rangeRoundBands([stackBarHeight, 0], .2);
-
-    var barY1 = d3.scale.linear();
-
-    var barX = d3.scale.ordinal()
-        .rangeRoundBands([0, stackBarWidth], .1, 0);
-
-    var xAxis = d3.svg.axis()
-        .scale(barX)
-        .orient("bottom");
-
-    var nest = d3.nest()
-        .key(function(d) { return d.group; });
-
-    var stack = d3.layout.stack()
-        .values(function(d) { return d.values; })
-        .x(function(d) { return d.abb; })
-        .y(function(d) { return d.value; }) //the thickness of the value
-        .out(function(d, barY0) { d.valueOffset = barY0; });
-
-    var barColor  = d3.scale.linear()
-        .domain([0, 6])
-        .range(["yellow", "red"])
-        .interpolate(d3.interpolateLab);
-
-    var stackedBarChart = svg_p.append("g")
-        .attr("class","stack-bar")
-        .attr("width", stackBarWidth + stackBarMargin.left + stackBarMargin.right)
-        .attr("height", stackBarHeight + stackBarMargin.top + stackBarMargin.bottom)
-        .append("g")
-        .attr("transform", "translate(70,440)");
-
-    d3.csv("curry/data/teambar.csv", function(error, barData) {
-        barData.forEach(function(d) {
-            //Assign the weights
-            if (d.groupname == "Points") {
-                d.value = (+d.value) * ptsWeight;
-            } else if (d.groupname == "Assists"){
-                d.value = (+d.value) * astWeight;
-            } else if (d.groupname == "Rebounds"){
-                d.value = (+d.value) * rebWeight;
-            } else if (d.groupname == "Turnovers"){
-                d.value = (+d.value) * tovWeight;
-            } else if (d.groupname == "Steals"){
-                d.value = (+d.value) * stlWeight;
-            } else if (d.groupname == "Blocks"){
-                d.value = (+d.value) * blkWeight;
-            } else {
-                d.value = +d.value;
-            }
-        });
-
-        var dataByGroup = nest.entries(barData);
-
-        stack(dataByGroup);
-        barX.domain(dataByGroup[0].values.map(function(d) { return d.abb; }));
-        barY0.domain(dataByGroup.map(function(d) { return d.key; }));
-        barY1.domain([0, d3.max(barData, function(d) { return d.value; })]).range([barY0.rangeBand(), 0]);
-
-        //Create the tooltips of a team's data 
-        var tip = d3.tip()
-            .attr('class', 'd3-tip')
-            .offset([-10, -128])
-            .html(function(d) {
-                return "<strong>"+ d.groupname +"</strong> of <strong><span style='color:red'>" + d.team + "</span></strong>";
-            })
-
-        stackedBarChart.call(tip);
-
-        //Horizontal group
-        var group = stackedBarChart.selectAll(".bar-group")
-            .data(dataByGroup)
-            .enter().append("g")
-            .attr("class", "bar-group")
-            .attr("transform", function(d) { return "translate(0," + barY0(d.key) + ")"; });
-
-        group.append("text")
-            .attr("class", "group-label")
-            .attr("x", -6)
-            .attr("y", function(d) { return barY1(d.values[0].value / 2); })
-            .attr("dy", ".35em")
-            .text(function(d) { return d.values[0].groupname; });
-
-        group.selectAll("rect")
-            .data(function(d) { return d.values; })
-            .enter().append("rect")
-            .style("fill", function(d) { return barColor(d.group); })
-            //.style("fill-opacity", "0.7")
-            .attr("x", function(d) { return barX(d.abb); })
-            .attr("y", function(d) { return barY1(d.value); })
-            .attr("width", barX.rangeBand())
-            .attr("height", function(d) { return barY0.rangeBand() - barY1(d.value); })
-            .on("mouseover", tip.show)
-            .on("mouseout", tip.hide);
-
-        group.filter(function(d, i) { return !i; }).append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + barY0.rangeBand() + ")")
-            .call(xAxis);
-
-        //Change the display when click the radio
-        d3.selectAll("input").on("change", change);
-
-        //change after the first two seconds
-        var timeout = setTimeout(function() {
-            d3.select("input[value=\"stacked\"]").property("checked", true).each(change);
-        }, 2000);
-
-        function change() {
-            clearTimeout(timeout);
-            if (this.value == "multiples") {
-                transitionMultiples();
-            } else {
-                transitionStacked();
-            }
-        }
-
-        function transitionMultiples() {
-            var t = stackedBarChart.transition().duration(750);
-            var g = t.selectAll(".bar-group").attr("transform", function(d) { return "translate(0," + barY0(d.key) + ")"; });
-            g.selectAll("rect").attr("y", function(d) { return barY1(d.value); });
-            g.select(".group-label").attr("y", function(d) { return barY1(d.values[0].value / 2); })
-            //Hide the pie chart 
-            svg_p.selectAll(".pie-chart").style("display","none");
-        }
-
-        function transitionStacked() {
-            var t = stackedBarChart.transition().duration(750);
-            var g = t.selectAll(".bar-group").attr("transform", "translate(0," + barY0(barY0.domain()[0]) + ")");
-            g.selectAll("rect").attr("y", function(d) { return barY1(d.value + d.valueOffset); });
-            g.select(".group-label").attr("y", function(d) { return barY1(d.values[0].value / 2 + d.values[0].valueOffset); })
-            //Display the pie chart
-            svg_p.selectAll(".pie-chart").style("display","inline");
-        }
-    });
-}
-
-//Click button to hide
-function hideStackBar() {
-    d3.selectAll(".stack-bar").remove();
-    d3.selectAll(".bar-option").style("display", "none");
-    svg_p.selectAll(".pie-chart").style("display","inline");
-}
-
-//Click the state to zoom
-function stateClick(d) {
-    //Inverse when have selected
-    if (active.node() == this) {
-        active.style("fill", function(d) {
-            //Get data value
-            var EASTorWEST = d.properties.EASTorWEST;
-            if (EASTorWEST) {
-                //If value exists…
-                if (EASTorWEST == "East") {
-                    return "#C6E2FF";
-                } else {
-                    return "#FFB6C1";
-                }
-            } else {
-                //If value is undefined…
-                return "#ccc";
-            }
-        });
-        //Delete the state name
-        stateAbb = d3.select(this).attr("class");
-        svg_p.selectAll(".text-" + stateAbb).remove();
-
-        return stateReset();
-    }
-
-    active = d3.select(this).style("fill", "orange");
-
-    //Hide the radar chart, stack bar chart, pie chart
-    d3.selectAll(".bar-form")
-        .style("display", "none");  
-    svg_p.selectAll(".teamRadar")
-        .style("display", "none");
-    svg_p.selectAll(".stack-bar")
-        .style("display", "none");
-    svg_p.selectAll(".pie-chart")
-        .style("display", "none");
-
-    //Modify the size 
-    var bounds = path.bounds(d),
-        dx = bounds[1][0] - bounds[0][0],
-        dy = bounds[1][1] - bounds[0][1],
-        x = (bounds[0][0] + bounds[1][0]) / 2,
-        y = (bounds[0][1] + bounds[1][1]) / 2,
-        scale = 0.7 / Math.max(dx / w, dy / h),
-        translate = [w / 2 - scale * x, h / 2 - scale * y];
-
-    svg_p.transition()
-        .duration(600)
-        .call(zoom.translate(translate).scale(scale).event);
-
-    g.append("text")
-        .attr("class", "text-" + d.properties.postal)
-        .attr("x", x - 20)
-        .attr("y", y)
-        //.attr("x", projection([d.properties.longitude, d.properties.latitude])[0])
-        //.attr("y", projection([d.properties.longitude, d.properties.latitude])[1])
-        .attr("font-size", "10px")
-        //.style("fill", "#888888")
-        .style("cursor", "default")
-        .text(d.properties.name);
-}
-
-//Get back to the normal map
-function stateReset() {
-    active = d3.select(null);
-
-    svg_p.transition()
-      .duration(600)
-      .call(zoom.translate([0, 0]).scale(1).event);
-
-    d3.selectAll(".bar-form")
-        .style("display", "inline");
-    svg_p.selectAll(".teamRadar")
-        .style("display", "inline");
-    svg_p.selectAll(".stack-bar")
-        .style("display", "inline");
-    svg_p.selectAll(".pie-chart")
-        .style("display", "inline");
-}
-
-function zoomed() {
-  g.style("stroke-width", 1.5 / d3.event.scale + "px");
-  g.attr("transform", "translate(" + d3.event.translate + ")scale(" + d3.event.scale + ")");
-}
 
 // If the drag behavior prevents the default click,
 // also stop propagation so we don’t click-to-zoom.
@@ -762,7 +442,7 @@ function nodeMouseover(d){
         .transition()
         .duration(200)
         .attr("r", function(d){ 
-            return 1.5 * Scale(d.winrate); })
+            return Scale(d.winrate); })
         .style("opacity", 1)
         .style("stroke-width", "2px");
 
@@ -792,7 +472,7 @@ function nodeMouseout(d){
         .transition()
         .duration(200)
         .attr("r", function(d) { 
-            return Scale(d.winrate); })
+            return Scale(d.winrate/2); })
         .style("opacity", function(d){
             return Opacity(d.winrate);})
         .style("stroke-width", "1px");

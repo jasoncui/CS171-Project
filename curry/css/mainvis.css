@@ -92,7 +92,7 @@ p {
 .college2 {
     /* background-color: #fff; */
     background-image: url(../img/curry_davidson2.jpg);
-    background-position: center
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -737,8 +737,11 @@ div.tooltip {
     fill: #FFD700;
 }
 
-.solidArc:hover {
-    fill: orangered ;
+
+
+#pie-area:hover{
+    cursor: pointer;
+    fill: #FFD700;
 }
 
 .solidArc {
