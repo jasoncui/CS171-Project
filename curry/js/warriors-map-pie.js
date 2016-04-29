@@ -149,6 +149,7 @@ d3.csv("curry/data/US-states.csv", function(data) {
             console.log("test!!");
             console.log(team_data[15]);
             teamClick(team_data[15]);
+
         });
     });
 });
@@ -227,9 +228,10 @@ function teamClick(d) {
                 })
         if (!first)
         {
-            active = d3.select(this).style("fill", "orange");
+            active = d3.select(this).style("fill", "#FFD700");
         }
         else{
+            d3.select(".GSW").style("fill", "#FFD700");
             first = false;
         }
 
