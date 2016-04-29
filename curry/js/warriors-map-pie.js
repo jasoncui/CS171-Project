@@ -41,6 +41,8 @@ var g = svg_p.append("g")
     .attr("width", w)
     .attr("height", h);
 
+var team_data;
+var first = true;
 
 //Load in state data, draw the map
 d3.csv("curry/data/US-states.csv", function(data) {
@@ -90,7 +92,9 @@ d3.csv("curry/data/US-states.csv", function(data) {
 
         //Load in NBA teams data
         d3.csv("curry/data/NBA-teams.csv", function(data) {
-            console.log(data)
+            team_data = data;
+            console.log("check")
+            console.log(team_data)
             //Map the rank to radius[2, 20] 
             Scale.domain([0, d3.max(data, function(d) { return d.winrate; })]);
             //Map the rank to opacity[0.3, 0.9] 
@@ -126,16 +130,7 @@ d3.csv("curry/data/US-states.csv", function(data) {
                 .style("cursor", "pointer")
                 .on("click", teamClick);
 
-            /*
-            d3.csv("curry/data/default-clicked-team.csv", function(data1) {
-               teamClick(data1[0]);
-               console.log(data1[0]);
-            });*/
-            //console.log(data[15]);
-            //teamClick(data[15]);
-            //teamList.push("Warriors");
-            // console.log(teamList);
-            
+
             //Text for temm abbreviation
             nodes.append("text")
                 .attr("class", function(d) {
@@ -150,10 +145,13 @@ d3.csv("curry/data/US-states.csv", function(data) {
                 .style("cursor", "default")
                 .text(function(d) {
                     return d.abb;});
+
+            console.log("test!!");
+            console.log(team_data[15]);
+            teamClick(team_data[15]);
         });
     });
 });
-
 
 //Judge if is in the array
 function contains(array, obj) { 
@@ -227,7 +225,14 @@ function teamClick(d) {
                         return "red";
                     };
                 })
-        active = d3.select(this).style("fill", "orange");
+        if (!first)
+        {
+            active = d3.select(this).style("fill", "orange");
+        }
+        else{
+            first = false;
+        }
+
         createPieChart(d.teamname, d.lightColor,d.darkColor);
     }
 
@@ -425,7 +430,6 @@ function createPieChart(teamname1,light,dark) {
         }
     }
 }
-
 
 
 // If the drag behavior prevents the default click,

@@ -561,6 +561,10 @@ body {
     cursor: pointer;
 }
 
+.node:hover {
+    fill: #FFD700;
+}
+
 .node circle {
     fill: #FFD700;
     stroke: #006BB6;
