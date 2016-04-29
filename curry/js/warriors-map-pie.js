@@ -1,6 +1,6 @@
 //Width and height for whole
 var w = 524;
-var h = 600;
+var h = 572;
 
 //image width and height
 var image_w = 100;
@@ -11,7 +11,7 @@ var active = d3.select(null);
 
 //Define map projection
 var projection = d3.geo.albersUsa()
-    .translate([w/3 + 80, h/3.5])
+    .translate([w/3 + 80, h/3.5-27])
     .scale([600]);
 
 //Define path generator
@@ -80,9 +80,9 @@ d3.csv("curry/data/US-states.csv", function(data) {
                 if (EASTorWEST) {
                     //If value exists…
                     if (EASTorWEST == "East") {
-                        return "#C6E2FF";
+                        return "#99c2ff";
                     } else {
-                        return "#FFB6C1";
+                        return "#ff9999";
                     }
                 } else {
                     //If value is undefined…
@@ -343,9 +343,9 @@ function createPieChart(teamname1,light,dark) {
                 //position of the pie charts
                 pieChart.attr("class", "single-pie-chart").attr("transform", function() { 
                     if (i <= 2){
-                        return "translate(" + (100 + i * 160) + "," + 390 +")" ;
+                        return "translate(" + (100 + i * 160) + "," + 355 +")" ;
                     } else {
-                        return "translate(" + (100 + (i-3) * 160) + "," + 530 +")" ;
+                        return "translate(" + (100 + (i-3) * 160) + "," + 500 +")" ;
                     }
                 });
 
