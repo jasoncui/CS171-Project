@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4c8a35-3b5a-4af5-a3b2-54a4395495e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/curry/js/warriors-league-leaders.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curry/css/mainvis.css" afterPath="$PROJECT_DIR$/curry/css/mainvis.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainvis.html" afterPath="$PROJECT_DIR$/mainvis.html" />
     </list>
     <ignored path="Curry Test 1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,7 +46,7 @@
       <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainvis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78031635">
+            <state vertical-scroll-proportion="0.12126538">
               <caret line="345" column="35" selection-start-line="345" selection-start-column="35" selection-end-line="345" selection-end-column="35" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -85,8 +82,8 @@
       <file leaf-file-name="mainvis.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/curry/css/mainvis.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.08">
-              <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+            <state vertical-scroll-proportion="-3.78">
+              <caret line="121" column="7" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -138,11 +135,11 @@
         <option value="$PROJECT_DIR$/curry/css/nv.d3.min.css" />
         <option value="$PROJECT_DIR$/curry/js/nv.d3.min.js" />
         <option value="$PROJECT_DIR$/curry/js/warriors-threes.js" />
-        <option value="$PROJECT_DIR$/curry/css/mainvis.css" />
         <option value="$PROJECT_DIR$/curry/js/warriors-leaders-FGs.js" />
         <option value="$PROJECT_DIR$/curry/js/warriors-leaders-threes.js" />
         <option value="$PROJECT_DIR$/curry/js/warriors-league-leaders.js" />
         <option value="$PROJECT_DIR$/mainvis.html" />
+        <option value="$PROJECT_DIR$/curry/css/mainvis.css" />
       </list>
     </option>
   </component>
@@ -152,8 +149,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="308" />
-    <option name="y" value="107" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="716" />
   </component>
@@ -354,7 +350,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="308" y="107" width="1280" height="716" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="716" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2046875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -740,14 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curry/css/mainvis.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.08">
-          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/curry/js/warriors-league-leaders.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -756,9 +744,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/curry/css/mainvis.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.78">
+          <caret line="121" column="7" selection-start-line="121" selection-start-column="6" selection-end-line="121" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mainvis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78031635">
+        <state vertical-scroll-proportion="0.12126538">
           <caret line="345" column="35" selection-start-line="345" selection-start-column="35" selection-end-line="345" selection-end-column="35" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />

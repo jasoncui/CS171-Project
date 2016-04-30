@@ -110,8 +110,15 @@ p {
 
 .warriors1 {
     /* background-color: #fff; */
-    background-image: url(../img/warriors1.jpg);
+    background-image: url(../img/warriors4.jpg);
     background-position: center
+    background-repeat: no-repeat;
+}
+
+.warriors2 {
+    /* background-color: #fff; */
+    background-image: url(../img/warriors5.jpg);
+    background-position: center;
     background-repeat: no-repeat;
 }
 
