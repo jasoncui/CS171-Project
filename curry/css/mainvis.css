@@ -25,7 +25,21 @@
 .nv-box {
     background-color: rgba(0, 0, 0, 0.47);
     color: #eee;
-    padding: 15px 15px 100px 15px;
+    padding: 15px 15px 130px 15px;
+    margin-bottom: 20px;
+}
+
+.nv-box-threes {
+    background-color: rgba(0, 0, 0, 0.47);
+    color: #eee;
+    padding: 15px 15px 80px 15px;
+    margin-bottom: 20px;
+}
+
+.nv-box-FGs {
+    background-color: rgba(0, 0, 0, 0.47);
+    color: #eee;
+    padding: 15px 15px 115px 15px;
     margin-bottom: 20px;
 }
 

@@ -376,7 +376,7 @@
             </div>
 
             <!-- Threes per game graph, 100% width -->
-            <div class="nv-box space-at-bottom warriors-threes-vis text-center">
+            <div class="nv-box-threes space-at-bottom warriors-threes-vis text-center">
                 <h2 id="yellow-highlight" style="margin-top: 5px; margin-bottom: 10px;">Three Pointers Per Game</h2>
                 <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
                 <svg id="warriors-threes"></svg>
@@ -391,7 +391,7 @@
 
                 </div>
                 <div class="col-md-8">
-                    <div class="nv-box warriors-leaders-vis text-center" style="margin-bottom: 20px;">
+                    <div class="nv-box-FGs warriors-leaders-vis text-center" style="margin-bottom: 20px;">
                         <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Field Goals</h2>
                         <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
                         <svg id="leaders-FGs"></svg>
@@ -416,16 +416,21 @@
 
             <div class="row space-at-bottom">
 
-                <div class="nv-box space-at-bottom warriors-leaders-vis text-center" style="margin-bottom: 20px;">
-                    <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Free Throw Percentages</h2>
-                    <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
-                    <svg id="leaders-FTPercentage"></svg>
-                </div>
-
-                <div class="nv-box space-at-bottom warriors-leaders-vis text-center">
-                    <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Points Per Game</h2>
-                    <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
-                    <svg id="leaders-PPG"></svg>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="nv-box space-at-bottom warriors-leaders-vis text-center" style="margin-bottom: 20px;">
+                            <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Free Throw Percentages</h2>
+                            <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                            <svg id="leaders-FTPercentage"></svg>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="nv-box space-at-bottom warriors-leaders-vis text-center">
+                            <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Points Scored Per Game</h2>
+                            <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                            <svg id="leaders-PPG"></svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
