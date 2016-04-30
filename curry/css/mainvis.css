@@ -143,6 +143,14 @@ p {
     background-repeat: no-repeat;
 }
 
+.goodbye {
+    /* background-color: #fff; */
+    background-image: url(../img/goodbye.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
 .bg-dark {
     color: #fff;
     background-color: #222;
@@ -920,3 +928,6 @@ div.tooltip {
     fill: #fff;
 }
 
+.goodbye-text {
+    margin-top: 300px;
+}
