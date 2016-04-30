@@ -22,6 +22,13 @@
     width: 100%;
 }
 
+.nv-box {
+    background-color: rgba(0, 0, 0, 0.47);
+    color: #eee;
+    padding: 15px 15px 60px 15px;
+    width: 100%;
+}
+
 .light-box {
     background-color: rgba(0, 0, 0, 0.07);
     color: #eee;
@@ -81,6 +88,11 @@ p {
 .bg-primary {
     background-color: #006BB6;
 }
+
+.bg-secondary {
+    background-color: #FFD700;
+}
+
 
 .college1 {
     /* background-color: #fff; */
@@ -827,4 +839,17 @@ div.tooltip {
     padding: 5px;
     margin-top: 5px;
     margin-bottom: 5px;
+}
+
+#warriors-threes {
+    margin-top: 10px;
+    fill: #fff;
+}
+
+.nv-legend-text {
+    fill: #fff;
+}
+
+.warriors-threes-vis {
+    height: 550px;
 }

@@ -22,11 +22,13 @@
     <!-- Plugin CSS -->
     <link rel="stylesheet" href="curry/css/animate.min.css" type="text/css">
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="curry/css/mainvis.css" type="text/css">
+    <!-- Library CSS -->
     <link type="text/css" rel="stylesheet" href="curry/css/radar-chart.css">
     <link href="curry/css/c3.css" rel="stylesheet">
     <link href="curry/css/nv.d3.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="curry/css/mainvis.css" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -294,13 +296,6 @@
         </div>
     </aside>
 
-<!--
-    <section class="warriors1">
-        
-    </section>-->
-
-
-
     <section class="bg-primary" id="warriors">
         <div class="container">
             <div class="row">
@@ -313,45 +308,12 @@
                 </p>
             </div>
         </div>
-        </div>
-        <div class="container">
-            <div class="row space-at-bottom">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-group wow bounceIn text-secondary"></i>
-                        <h3 class="text-tertiary">Three-Time All-Star</h3>
-                        <p class="text-faded">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-trophy wow bounceIn text-secondary" data-wow-delay=".2s"></i>
-                        <h3 class="text-tertiary">2015 MVP</h3>
-                        <p class="text-faded">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-line-chart wow bounceIn text-secondary" data-wow-delay=".3s"></i>
-                        <h3 class="text-tertiary">NBA League Champion</h3>
-                        <p class="text-faded">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-money wow bounceIn text-secondary" data-wow-delay=".4s"></i>
-                        <h3 class="text-tertiary">2016 NBA Scoring Leader</h3>
-                        <p class="text-faded">You have to make your websites with love these days!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
 
-     <section id="college" class="college1">
+     <section class="warriors1">
         <div class="container">
-            <div class="row">
+            <div class="row space-at-bottom">
                 <div class="col-xs-7 text-center" style="border-right:1px solid #ccc;">
                     <div class="box">
                         <h2 id="yellow-highlight" class="text-center">NBA Teams Stats Distribution</h2>
@@ -377,10 +339,21 @@
         </div>
     </section>
 
+    <section class="warriors2">
+        <div class="container">
+            <div class="row space-at-bottom">
+                <div class="nv-box space-at-bottom warriors-threes-vis">
+                    <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">Three Pointers Per Game</h2>
+                    <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                    <svg id="warriors-threes"></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <aside class="bg-dark">
         <div class="container text-center">
-            <div id="warriors-threes"></div>
             <div class="call-to-action space-at-bottom">
                 <h2 style="margin-bottom: 10px;">Data Download Links</h2>
                 <i class="text-faded">All data from this project was taken from public sources freely available online, mainly NBA.com/Stats and Basketball Reference.</i>
@@ -478,7 +451,6 @@
     <script src="curry/js/d3.basketball-shot-chart.js"></script>
     <script src="curry/js/c3.min.js"></script>
     <script src="curry/js/nv.d3.min.js"></script>
-    <script type="text/javascript" src="curry/js/warriors-threes.js"></script>
     <script src="curry/js/d3pie.min.js"></script>
     <script src="curry/js/timeknots-min.js"></script>
 
@@ -496,7 +468,8 @@
     <script src="curry/js/college-timeline.js"></script>
 
     <!-- Visualizations for warriors section -->
-    <script type="text/javascript" src="curry/js/warriors-map-pie.js"></script>
+    <script src="curry/js/warriors-map-pie.js"></script>
+    <script src="curry/js/warriors-threes.js"></script>
 
     <!--
     <script src="curry/js/career.js"></script>
