@@ -26,7 +26,7 @@
     background-color: rgba(0, 0, 0, 0.47);
     color: #eee;
     padding: 15px 15px 60px 15px;
-    width: 100%;
+    margin-bottom: 20px;
 }
 
 .light-box {
@@ -846,10 +846,26 @@ div.tooltip {
     fill: #fff;
 }
 
+#leaders-threes {
+    margin-top: 10px;
+    fill: #fff;
+}
+
+#leaders-FGs {
+    margin-top: 10px;
+    fill: #fff;
+}
+
 .nv-legend-text {
     fill: #fff;
 }
 
 .warriors-threes-vis {
     height: 550px;
+}
+
+.warriors-leaders-vis {
+    height: 400px;
+    width: 80%;
+    margin: 0 auto;
 }
