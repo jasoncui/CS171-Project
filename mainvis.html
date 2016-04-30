@@ -19,14 +19,15 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="curry/font-awesome/css/font-awesome.min.css" type="text/css">
 
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="curry/css/animate.min.css" type="text/css">
+    <!-- Library CSS -->
+    <link href="curry/css/animate.min.css" rel="stylesheet"  type="text/css">
+    <link href="curry/css/radar-chart.css" rel="stylesheet" type="text/css">
+    <link href="curry/css/c3.css" rel="stylesheet" type="text/css">
+    <link href="curry/css/nv.d3.min.css" rel="stylesheet" type="text/css">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="curry/css/mainvis.css" type="text/css">
-    <link type="text/css" rel="stylesheet" href="curry/css/radar-chart.css"></link>
-    <link href="curry/css/c3.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./d3.basketball-shot-chart.css">
+     <link rel="stylesheet" type="text/css" href="./d3.basketball-shot-chart.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -130,13 +131,17 @@
         </div> <!-- /container -->
     </section>
 
+    <!-- first college section -->
     <section id="college" class="college1">
         <div class="container">
+
+            <!-- college text -->
             <div class="row">
                     <h2 class="section-heading bio-intro" id="yellow-highlight">College Career</h2>
                     <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
             </div>
 
+            <!-- three college pie charts -->
             <div class="row box">
                 <div class="col-md-4">
                     <h2 id="yellow-highlight" class="text-center">Threes</h2>
@@ -154,62 +159,12 @@
                     <div id="collegePie2" class="wow fadeIn" data-wow-delay="0.7s"></div>
                 </div>
                 <p>Early on, we can already see that Curry shows signs of being an exceptional shooter. At the time of this article's writing, the 2015-16 league averages for threes, field goals, and free throws, are <span id="yellow-highlight">35.4%, 45.2%, and 75.7%</span> respectively. Curry already surpasses all three statistics just in his college seasons. In his 06-07 season Curry ranked 3rd in three pointers (130), and <span id="yellow-highlight">in his 07-08 season Curry ranked 1st in three pointers (162)</span>.</p>
-            </div>
-            <!--
-            <div style="text-align:center" class="box space-at-bottom">
-                <div id="multiple-bar"></div>
-            </div>
-            -->
+            </div><!-- /row box -->
 
-            <!--
-            <div class="user-control">
-                <select id="area" class="form-control" onchange="dataManipulation()">
-                    <option value="all">All Cities</option>
-                    <option value="Boston">Boston</option>
-                    <option value="Cambridge">Cambridge</option>
-                    <option value="Somerville">Somerville</option>
-                </select>
-            </div>
-            <div class="row text-center">
-                <div class="col-xs-6" style="padding-right:20px; border-right: 1px solid #ccc;">
-                    <div id="bar1"></div>
-                    <p id="blue-highlight">Blah blah blah blah blah blah blah blah blah blah.</p>
-                </div>
-                <div class="col-xs-6">
-                    <div id="bar2"></div>
-                    <p id="blue-highlight">Blah blah blah blah blah blah blah blah blah blah.</p>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Viz 1</h2>
-                    <div> Sort by:</div>
-                    <div class = "select-box" id = "select-box"></div>
-                    <div class = "chart" id= "chart-area-career" color="white"></div>
-
-                    <h2 class="section-heading">Viz 2</h2>
-                    <div class = "chart" id= "chart-area-college" color="white"></div>
-
-                    <div> Sort by:</div>
-                    <div class = "select-box" id = "select-box-college"></div>
-
-                    <h2 class="section-heading">Viz 3</h2>
-                    <div class = "chart" id= "tree" color="white"></div>
-
-                    <h2 class="section-heading">Viz 4</h2>
-                    <div class = "chart" id= "pie" color="white"></div>
-
-                    <h2 class="section-heading">Shot Chart</h2>
-                    <p class='center' id='shot-chart'></p>
-
-                    -->
-                </div>
-            </div>
         </div> <!-- /container -->
     </section>
 
+    <!-- first text section to break up images -->
     <aside class="bg-primary">
         <div class="container text-center">
             <div class="call-to-action">
@@ -219,8 +174,11 @@
         </div>
     </aside>
 
+    <!-- second college section -->
     <section class="college2">
         <div class="container">
+
+            <!-- first row of graph and text -->
             <div class="row">
                 <div class="col-xs-6 space-at-bottom text-center" style="padding-right:20px; border-right: 1px solid #ccc;">
                     <div class="box">
@@ -243,8 +201,8 @@
                 </div>
             </div> <!-- /row -->
 
+            <!-- second row of grpah and text -->
             <div class="row">
-                <!-- Left column, college shot data -->
                 <div class="col-xs-6 space-at-bottom" style="padding-right:20px; border-right: 1px solid #ccc;">
                     <div class="box">
                         <p class="text-secondary">
@@ -254,8 +212,6 @@
                         </p>
                     </div>
                 </div>
-
-                <!-- Right column, other college stats -->
                 <div class="col-xs-6 text-center space-at-bottom">
                     <div class="box">
                         <h2 id="yellow-highlight">Other College Stats</h2>
@@ -269,9 +225,11 @@
                     </div>
                 </div>
             </div> <!-- /row -->
-        </div> <!-- /container -->
-    </section> <!-- /college2 -->
 
+        </div> <!-- /container -->
+    </section>
+
+    <!-- dark college section -->
     <aside class="bg-dark">
         <div class="container">
             <div class="call-to-action">
@@ -285,6 +243,7 @@
                     He finished his final season at Davidson averaging 28.6 points, 5.6 assists, and 2.5 steals. He was the NCAA scoring leader and was named a consensus first team All-American. Although he opted out of his senior year at Davidson, Curry stated that he still planned to earn his degree.</p>
             </div>
 
+            <!-- college tree graph -->
             <div style="text-align:center" class="space-at-top box">
                 <h2 id="yellow-highlight" class="text-center">College Records and Awards</h2>
                 <i class="text-faded">Click on one of the below nodes to expand the tree. Clicking on an already expanded node will contract the tree.</i>
@@ -294,17 +253,11 @@
         </div>
     </aside>
 
-<!--
-    <section class="warriors1">
-        
-    </section>-->
-
-
-
+    <!-- first warriors blue section -->
     <section class="bg-primary" id="warriors">
         <div class="container">
             <div class="row">
-                <h2 class="section-heading wow bounceIn bio-intro">Golden State Warriors</h2>
+                <h2 class="section-heading bio-intro">Golden State Warriors - EDIT THIS TEXT</h2>
                 <p class="text-faded">
                     Wardell Stephen "Steph" Curry II (born March 14, 1988) is an American professional basketball player for the Golden State Warriors of the                            National Basketball Association (NBA). Many basketball players have called him the <span id="yellow-highlight">greatest shooter in NBA          history</span>. In 2015, Curry won the <span id="yellow-highlight">NBA Most Valuable Player Award</span> and led the Warriors to their first championship since 1975. In 2016, he led his team to the <span id="yellow-highlight">most wins in an NBA season</span>.
                 </p>
@@ -313,54 +266,21 @@
                 </p>
             </div>
         </div>
-        </div>
-        <div class="container">
-            <div class="row space-at-bottom">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-group wow bounceIn text-secondary"></i>
-                        <h3 class="text-tertiary">Three-Time All-Star</h3>
-                        <p class="text-faded">Our templates are updated regularly so they don't break.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-trophy wow bounceIn text-secondary" data-wow-delay=".2s"></i>
-                        <h3 class="text-tertiary">2015 MVP</h3>
-                        <p class="text-faded">You can use this theme as is, or you can make changes!</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-line-chart wow bounceIn text-secondary" data-wow-delay=".3s"></i>
-                        <h3 class="text-tertiary">NBA League Champion</h3>
-                        <p class="text-faded">We update dependencies to keep things fresh.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-money wow bounceIn text-secondary" data-wow-delay=".4s"></i>
-                        <h3 class="text-tertiary">2016 NBA Scoring Leader</h3>
-                        <p class="text-faded">You have to make your websites with love these days!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
-
-     <section id="college" class="college1">
+    <!-- warriors section -->
+     <section class="warriors1">
         <div class="container">
-            <div class="row">
+            <div class="row space-at-bottom">
                 <div class="col-xs-7 text-center" style="border-right:1px solid #ccc;">
                     <div class="box">
                         <h2 id="yellow-highlight" class="text-center">NBA Teams Stats Distribution</h2>
                         <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
                         <div><h3 id ="team-name"></h3></div>
-                        <div id="map-pie"></div> 
+                        <div id="map-pie"></div>
                     </div>
                 </div>
-                <div class="col-xs-5" style="border-right: 1px solid #ccc;">
+                <div class="col-xs-5">
                     <div class="box">
                         <p class="text-secondary">
                             The Golden State Warriors made history this season by setting the ecord for most wins in a single season, beating Memphis, and finishing 73-9. Leading the team, Curry has broken numerous three-point records this season, including his own NBA record for made three-pointers in a season of 286; he finished the season with 402 three pointers. He has made a three-pointer in 151 consecutive games, which broke the NBA record of 127 set by Kyle Korver in 2014. 
@@ -377,42 +297,150 @@
         </div>
     </section>
 
-
-         <section id="college10" class="college10">
+     <section class="warriors1">
         <div class="container">
-            <div class="row">
+            <div class="row space-at-bottom">
                 <div class="col-xs-8 text-center" style="border-right:1px solid #ccc;">
                     <div class="box">
-                        <h2 id="yellow-highlight" class="text-center"> Stephen Curry Shot Chart </h2>
-                        <i class="text-faded">Hover over shot chart to find more details about Stephen Curry's shooting percentage and tendencies. </i>
-                        
-                         <div id="court"></div>
 
+                        <h2 id="yellow-highlight" class="text-center"> Stephen Curry Shot Chart </h2>
+                        <i class="text-faded">Hover over the chart to see Stephen Curry's detailed shot percentages and frequencies. </i>
+                        <div id="court"></div>
                     </div>
                 </div>
-                <div class="col-xs-4" style="border-right: 1px solid #ccc;">
+                <div class="col-xs-4">
                     <div class="box">
                         <p class="text-secondary">
-                            The Golden State Warriors made history this season by setting the ecord for most wins in a single season, beating Memphis, and finishing 73-9. Leading the team, Curry has broken numerous three-point records this season, including his own NBA record for made three-pointers in a season of 286; he finished the season with 402 three pointers. He has made a three-pointer in 151 consecutive games, which broke the NBA record of 127 set by Kyle Korver in 2014. 
+                            These graphs show that in general Stephen Curry is a phenomenal shooter who has a high probability of scoring from even a long distance. As evident in this shot chart, Curry makes a shot from various angles and locations on the court. In general, Stephen Curry is more accurate on the left side of the court, but shoots frequently on both sides. Stephen Curry is also well known for three-point sideline fadeaways. 
+
+                            <br>
+                            Curry this season is shooting 44.5%, according to the summary from the NBA statistics site. Although it is hard to see from the actual statistical evidence, which shows the distance he starts jumping from, Curry's shots are actually even harder than they appear to be, as he retreats back from the three-point line to 28 or 30 feet from the basket. 
                         </p>
+
+                         
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-<!--
-    <section class="bg-primary" id="warriors">
+
+
+    <!-- yellow quote section -->
+    <aside class="bg-secondary">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2 style="margin-bottom: 10px;"><i>"I want to practice to the point where it's almost uncomfortable how fast you shoot, so that in the game things kind of slow down."</i></h2>
+                <i id="text-primary">-- Steph Curry</i>
+            </div>
+        </div>
+    </aside>
+
+    <!-- next warriors section -->
+    <section class="warriors2">
         <div class="container">
-            <div class="box">
-        <h2 id="yellow-highlight" class="text-center"> Stephen Curry Shot Chart </h2>
-        <div id="court"></div>
-    </div>
-</div>
+
+            <!-- row of text -->
+            <div class="row">
+                <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+            </div>
+
+            <!-- 3s graph and text -->
+            <div class="row space-at-bottom">
+                <div class="col-md-8">
+                    <div class="nv-box warriors-leaders-vis text-center" style="margin-bottom: 20px;">
+                        <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Threes</h2>
+                        <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                        <svg id="leaders-threes"></svg>
+                    </div>
+
+                </div>
+                <div class="col-md-4">
+                    <p class="text-secondary box">
+                        Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. nst Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. nst Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds.</p>
+
+                    </p>
+                </div>
+            </div>
+
+            <!-- row of text -->
+            <div class="row">
+                <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+            </div>
+
+            <!-- Threes per game graph, 100% width -->
+            <div class="nv-box-threes space-at-bottom warriors-threes-vis text-center">
+                <h2 id="yellow-highlight" style="margin-top: 5px; margin-bottom: 10px;">Three Pointers Per Game</h2>
+                <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                <svg id="warriors-threes"></svg>
+            </div>
+
+            <!-- row of text -->
+            <div class="row">
+                <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+            </div>
+
+            <!-- field goal leaders and graph -->
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="text-secondary box">
+                        Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. nst Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. nst Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds.</p>
+
+                    </p>
+                </div>
+                <div class="col-md-8">
+                    <div class="nv-box-FGs warriors-leaders-vis text-center" style="margin-bottom: 20px;">
+                        <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Field Goals</h2>
+                        <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                        <svg id="leaders-FGs"></svg>
+                    </div>
+                </div>
+            </div> <!-- /row -->
+
+        </div>
     </section>
--->
+
+    <!-- yellow background quote section -->
+    <aside class="bg-secondary">
+        <div class="container text-center">
+            <div class="call-to-action">
+                <h2 style="margin-bottom: 10px;"><i>"I want to practice to the point where it's almost uncomfortable how fast you shoot, so that in the game things kind of slow down."</i></h2>
+                <i id="text-primary">-- Steph Curry</i>
+            </div>
+        </div>
+    </aside>
 
 
+    <section class="warriors3">
+        <div class="container">
+
+            <!-- two graphs -->
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="nv-box space-at-bottom warriors-leaders-vis text-center" style="margin-bottom: 20px;">
+                        <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Free Throw Percentages</h2>
+                        <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                        <svg id="leaders-FTPercentage"></svg>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="nv-box space-at-bottom warriors-leaders-vis text-center">
+                        <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Points Scored Per Game</h2>
+                        <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                        <svg id="leaders-PPG"></svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- row of text -->
+            <div class="row">
+                <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+            </div>
+
+        </div> <!-- /row -->
+    </section>
+
+    <!-- data download dark section -->
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action space-at-bottom">
@@ -455,7 +483,19 @@
         </div>
     </aside>
 
-    <section id="contact" class="bg-primary">
+    <section class="goodbye">
+        <div class="container">
+
+            <!-- row of text -->
+            <div class="row goodbye-text">
+                <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+            </div>
+
+        </div> <!-- /row -->
+    </section>
+
+    <!-- contact, bottom of page -->
+    <section id="contact" class="bg-primary bottom-of-page">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -489,8 +529,6 @@
         </div>
     </section>
 
-
-
     <!-- jQuery -->
     <script src="curry/js/jquery.js"></script>
 
@@ -507,30 +545,20 @@
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
     <script src="curry/js/d3.min.js"></script>
-    <script src="curry/js/d3.tip.js"></script>
     <script src="curry/js/hexbin.js"></script>
     <script src="curry/js/d3.chart.js"></script>
     <script src="curry/js/d3.chart.defaults.js"></script>
     <script src="curry/js/d3.basketball-shot-chart.js"></script>
+    <script src="./d3.basketball-shot-chart.js"></script>
     <script src="curry/js/c3.min.js"></script>
+    <script src="curry/js/nv.d3.min.js"></script>
     <script src="curry/js/d3pie.min.js"></script>
     <script src="curry/js/timeknots-min.js"></script>
-
-    <script src="http://rawgit.com/mbostock/d3/master/d3.js"></script>
-    <script src="http://rawgit.com/virajsanghvi/d3-plugins/master/hexbin/hexbin.js"></script>
-    <script src="http://rawgit.com/misoproject/d3.chart/master/d3.chart.js"></script>
-    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
-    <script src="http://rawgit.com/virajsanghvi/d3.chart.defaults/master/d3.chart.defaults.js"></script>
-    <!--<script scr="./shot_plot.js"></script>-->
-    <script scr="./dataGrab.js"></script>
-    <script src="./d3.basketball-shot-chart.js"></script>
-    
 
     <script src="curry/js/bar.js"></script>
     <script src="curry/js/collegeVis.js"></script>
     <script type="text/javascript" src="curry/js/radar-chart.js"></script>
     <script type="text/javascript" src="curry/js/d3.tip.v0.6.3.js"></script>
-    <script type="text/javascript" src="curry/js/warriors-map-pie.js"></script>
     <script src="curry/js/chart.js"></script>
 
     <!-- Visualizations for college section -->
@@ -540,13 +568,17 @@
     <script src="curry/js/college-pies.js"></script>
     <script src="curry/js/college-timeline.js"></script>
 
+    <!-- Visualizations for warriors section -->
+    <script src="curry/js/warriors-map-pie.js"></script>
+    <script src="curry/js/warriors-threes.js"></script>
+    <script src="curry/js/warriors-league-leaders.js"></script>
+
     <!--
     <script src="curry/js/career.js"></script>
     <script src="curry/js/college.js"></script>
     <script src="curry/js/tree.js"></script>
     <script src="curry/js/shot-chart.js"></script>
     -->
-
 </body>
 
 </html>
