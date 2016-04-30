@@ -25,7 +25,7 @@
 .nv-box {
     background-color: rgba(0, 0, 0, 0.47);
     color: #eee;
-    padding: 15px 15px 60px 15px;
+    padding: 15px 15px 100px 15px;
     margin-bottom: 20px;
 }
 
@@ -118,6 +118,13 @@ p {
 .warriors2 {
     /* background-color: #fff; */
     background-image: url(../img/warriors5.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.warriors3 {
+    /* background-color: #fff; */
+    background-image: url(../img/warriors6.jpg);
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -863,7 +870,21 @@ div.tooltip {
     fill: #fff;
 }
 
+#leaders-FTPercentage {
+    margin-top: 10px;
+    fill: #fff;
+}
+
+#leaders-PPG {
+    margin-top: 10px;
+    fill: #fff;
+}
+
 .nv-legend-text {
+    fill: #fff;
+}
+
+.nv-group {
     fill: #fff;
 }
 
@@ -873,6 +894,15 @@ div.tooltip {
 
 .warriors-leaders-vis {
     height: 400px;
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
+
+.nv-bar .positive {
+    fill: #fff;
+}
+
+.nvd3 .nv-discretebar .nv-groups text, .nvd3 .nv-multibarHorizontal .nv-groups text {
+    fill: #fff;
+}
+

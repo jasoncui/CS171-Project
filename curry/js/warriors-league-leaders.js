@@ -169,6 +169,8 @@ nv.addGraph(function() {
         .duration(300)
         ;
 
+    chart.xAxis.rotateLabels(-15);
+
     d3.select('#leaders-threes')
         .datum(leagueThreesLeaders)
         .call(chart);
@@ -185,6 +187,8 @@ nv.addGraph(function() {
         .showValues(true)
         .duration(300)
         ;
+
+    chart.xAxis.rotateLabels(-15);
 
     d3.select('#leaders-FTPercentage')
         .datum(leagueFTPercentage)
@@ -203,6 +207,8 @@ nv.addGraph(function() {
         .duration(500)
         ;
 
+    chart.xAxis.rotateLabels(-15);
+
     d3.select('#leaders-FGs')
         .datum(leagueFGLeaders)
         .call(chart);
@@ -219,6 +225,8 @@ nv.addGraph(function() {
         .showValues(true)
         .duration(500)
         ;
+
+    chart.xAxis.rotateLabels(-15);
 
     d3.select('#leaders-PPG')
         .datum(leaguePointsPerGameLeaders)
