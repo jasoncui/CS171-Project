@@ -24,8 +24,9 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="curry/css/mainvis.css" type="text/css">
-    <link type="text/css" rel="stylesheet" href="curry/css/radar-chart.css"></link>
+    <link type="text/css" rel="stylesheet" href="curry/css/radar-chart.css">
     <link href="curry/css/c3.css" rel="stylesheet">
+    <link href="curry/css/nv.d3.min.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -356,10 +357,10 @@
                         <h2 id="yellow-highlight" class="text-center">NBA Teams Stats Distribution</h2>
                         <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
                         <div><h3 id ="team-name"></h3></div>
-                        <div id="map-pie"></div> 
+                        <div id="map-pie"></div>
                     </div>
                 </div>
-                <div class="col-xs-5" style="border-right: 1px solid #ccc;">
+                <div class="col-xs-5">
                     <div class="box">
                         <p class="text-secondary">
                             The Golden State Warriors made history this season by setting the ecord for most wins in a single season, beating Memphis, and finishing 73-9. Leading the team, Curry has broken numerous three-point records this season, including his own NBA record for made three-pointers in a season of 286; he finished the season with 402 three pointers. He has made a three-pointer in 151 consecutive games, which broke the NBA record of 127 set by Kyle Korver in 2014. 
@@ -379,6 +380,7 @@
 
     <aside class="bg-dark">
         <div class="container text-center">
+            <div id="warriors-threes"></div>
             <div class="call-to-action space-at-bottom">
                 <h2 style="margin-bottom: 10px;">Data Download Links</h2>
                 <i class="text-faded">All data from this project was taken from public sources freely available online, mainly NBA.com/Stats and Basketball Reference.</i>
@@ -475,6 +477,8 @@
     <script src="curry/js/d3.chart.defaults.js"></script>
     <script src="curry/js/d3.basketball-shot-chart.js"></script>
     <script src="curry/js/c3.min.js"></script>
+    <script src="curry/js/nv.d3.min.js"></script>
+    <script type="text/javascript" src="curry/js/warriors-threes.js"></script>
     <script src="curry/js/d3pie.min.js"></script>
     <script src="curry/js/timeknots-min.js"></script>
 
@@ -482,7 +486,6 @@
     <script src="curry/js/collegeVis.js"></script>
     <script type="text/javascript" src="curry/js/radar-chart.js"></script>
     <script type="text/javascript" src="curry/js/d3.tip.v0.6.3.js"></script>
-    <script type="text/javascript" src="curry/js/warriors-map-pie.js"></script>
     <script src="curry/js/chart.js"></script>
 
     <!-- Visualizations for college section -->
@@ -491,6 +494,9 @@
     <script src="curry/js/college-line.js"></script>
     <script src="curry/js/college-pies.js"></script>
     <script src="curry/js/college-timeline.js"></script>
+
+    <!-- Visualizations for warriors section -->
+    <script type="text/javascript" src="curry/js/warriors-map-pie.js"></script>
 
     <!--
     <script src="curry/js/career.js"></script>

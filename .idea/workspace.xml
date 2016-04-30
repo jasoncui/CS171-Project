@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b4c8a35-3b5a-4af5-a3b2-54a4395495e0" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/curry/js/nv.d3.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/curry/css/nv.d3.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/curry/js/warriors-threes.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/curry/js/nv.d3.min.js" afterPath="$PROJECT_DIR$/curry/js/nv.d3.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mainvis.html" afterPath="$PROJECT_DIR$/mainvis.html" />
     </list>
     <ignored path="Curry Test 1.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,40 +37,59 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="college-tree.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="college-tree.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/curry/js/college-tree.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.048465267">
+            <state vertical-scroll-proportion="0.0">
               <caret line="2" column="18" selection-start-line="1" selection-start-column="7" selection-end-line="2" selection-end-column="18" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="mainvis.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mainvis.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.2">
-              <caret line="383" column="51" selection-start-line="383" selection-start-column="51" selection-end-line="383" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.4903339">
+              <caret line="362" column="37" selection-start-line="362" selection-start-column="37" selection-end-line="362" selection-end-column="37" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#0;n#aside#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#aside#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="warriors-map-pie.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/curry/js/warriors-map-pie.js">
+      <file leaf-file-name="warriors-threes.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/curry/js/warriors-threes.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-              <folding>
-                <marker date="1461812960000" expanded="true" signature="21172:21181" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="-18.592592">
+              <caret line="2360" column="3" selection-start-line="2360" selection-start-column="3" selection-end-line="2360" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nv.d3.min.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/curry/css/nv.d3.min.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nv.d3.min.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/curry/js/nv.d3.min.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -87,7 +109,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-4.1">
               <caret line="395" column="18" selection-start-line="395" selection-start-column="18" selection-end-line="395" selection-end-column="18" />
-              <folding />
+              <folding>
+                <marker date="1461975374000" expanded="true" signature="13643:13646" placeholder="{...}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,10 +158,11 @@
         <option value="$PROJECT_DIR$/curry/js/college-line.js" />
         <option value="$PROJECT_DIR$/curry/js/college-timeline.js" />
         <option value="$PROJECT_DIR$/curry/js/college-tree.js" />
-        <option value="$PROJECT_DIR$/curry/js/warriors-map-pie.js" />
         <option value="$PROJECT_DIR$/curry/css/mainvis.css" />
-        <option value="$PROJECT_DIR$/mainvis.html" />
         <option value="$PROJECT_DIR$/curry/js/nv.d3.min.js" />
+        <option value="$PROJECT_DIR$/curry/js/warriors-map-pie.js" />
+        <option value="$PROJECT_DIR$/curry/js/warriors-threes.js" />
+        <option value="$PROJECT_DIR$/mainvis.html" />
       </list>
     </option>
   </component>
@@ -279,6 +304,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/curry/js" />
+      <recent name="$PROJECT_DIR$/curry/css" />
       <recent name="$PROJECT_DIR$/curry/data" />
     </key>
   </component>
@@ -346,7 +373,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="716" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="716" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2046875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -383,23 +410,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/curry/js/collegeGroupVis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="98" column="31" selection-start-line="98" selection-start-column="31" selection-end-line="98" selection-end-column="31" />
-          <folding>
-            <marker date="1461697923000" expanded="true" signature="998:1008" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curry/data/multiple_bar_data.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainvis.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -409,7 +419,8 @@
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#aside#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#aside#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -418,7 +429,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="648" column="15" selection-start-line="648" selection-start-column="14" selection-end-line="648" selection-end-column="15" />
-          <folding />
+          <folding>
+            <marker date="1461975374000" expanded="true" signature="13643:13646" placeholder="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -707,14 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curry/js/college-pies.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-105.55556">
-          <caret line="190" column="28" selection-start-line="190" selection-start-column="28" selection-end-line="190" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/curry/js/college.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43548387">
@@ -731,51 +736,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/curry/js/warriors-map-pie.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-          <folding>
-            <marker date="1461812960000" expanded="true" signature="21172:21181" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/curry/css/mainvis.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.1">
           <caret line="395" column="18" selection-start-line="395" selection-start-column="18" selection-end-line="395" selection-end-column="18" />
+          <folding>
+            <marker date="1461975374000" expanded="true" signature="13643:13646" placeholder="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curry/js/warriors-map-pie.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.8400645">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curry/js/college-tree.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="18" selection-start-line="1" selection-start-column="7" selection-end-line="2" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curry/css/nv.d3.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/curry/js/nv.d3.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16962843">
-          <caret line="7" column="25158" selection-start-line="7" selection-start-column="25158" selection-end-line="7" selection-end-column="25158" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curry/js/warriors-threes.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.592592">
+          <caret line="2360" column="3" selection-start-line="2360" selection-start-column="3" selection-end-line="2360" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/curry/js/college-pies.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-105.55556">
+          <caret line="190" column="28" selection-start-line="190" selection-start-column="28" selection-end-line="190" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mainvis.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.2">
-          <caret line="383" column="51" selection-start-line="383" selection-start-column="51" selection-end-line="383" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.4903339">
+          <caret line="362" column="37" selection-start-line="362" selection-start-column="37" selection-end-line="362" selection-end-column="37" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#section#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#0;n#aside#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#h2#0;n#div#0;n#div#0;n#aside#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#section#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#aside#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/curry/js/college-tree.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.048465267">
-          <caret line="2" column="18" selection-start-line="1" selection-start-column="7" selection-end-line="2" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
