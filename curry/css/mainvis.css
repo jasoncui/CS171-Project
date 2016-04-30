@@ -143,6 +143,14 @@ p {
     background-repeat: no-repeat;
 }
 
+.warriors4 {
+    /* background-color: #fff; */
+    background-image: url(../img/warriors7.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
 .goodbye {
     /* background-color: #fff; */
     background-image: url(../img/goodbye.jpg);
@@ -326,7 +334,6 @@ header .header-content .header-content-inner p {
     margin-bottom: 30px;
     font-size: 16px;
     font-weight: 300;
-    color: rgba(255,255,255,.7);
 }
 
 @media(min-width:768px) {
@@ -929,5 +936,12 @@ div.tooltip {
 }
 
 .goodbye-text {
-    margin-top: 300px;
+    margin-top: 350px;
+}
+
+.tree-vis {
+    margin: 0 auto;
+    text-align:center;
+    width: 80%;
+    margin-bottom: 20px;
 }
