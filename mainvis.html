@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="curry/css/mainvis.css" type="text/css">
     <link type="text/css" rel="stylesheet" href="curry/css/radar-chart.css"></link>
     <link href="curry/css/c3.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./d3.basketball-shot-chart.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -377,6 +378,41 @@
     </section>
 
 
+         <section id="college10" class="college10">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-8 text-center" style="border-right:1px solid #ccc;">
+                    <div class="box">
+                        <h2 id="yellow-highlight" class="text-center"> Stephen Curry Shot Chart </h2>
+                        <i class="text-faded">Hover over shot chart to find more details about Stephen Curry's shooting percentage and tendencies. </i>
+                        
+                         <div id="court"></div>
+
+                    </div>
+                </div>
+                <div class="col-xs-4" style="border-right: 1px solid #ccc;">
+                    <div class="box">
+                        <p class="text-secondary">
+                            The Golden State Warriors made history this season by setting the ecord for most wins in a single season, beating Memphis, and finishing 73-9. Leading the team, Curry has broken numerous three-point records this season, including his own NBA record for made three-pointers in a season of 286; he finished the season with 402 three pointers. He has made a three-pointer in 151 consecutive games, which broke the NBA record of 127 set by Kyle Korver in 2014. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!--
+    <section class="bg-primary" id="warriors">
+        <div class="container">
+            <div class="box">
+        <h2 id="yellow-highlight" class="text-center"> Stephen Curry Shot Chart </h2>
+        <div id="court"></div>
+    </div>
+</div>
+    </section>
+-->
+
+
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action space-at-bottom">
@@ -453,6 +489,8 @@
         </div>
     </section>
 
+
+
     <!-- jQuery -->
     <script src="curry/js/jquery.js"></script>
 
@@ -477,6 +515,16 @@
     <script src="curry/js/c3.min.js"></script>
     <script src="curry/js/d3pie.min.js"></script>
     <script src="curry/js/timeknots-min.js"></script>
+
+    <script src="http://rawgit.com/mbostock/d3/master/d3.js"></script>
+    <script src="http://rawgit.com/virajsanghvi/d3-plugins/master/hexbin/hexbin.js"></script>
+    <script src="http://rawgit.com/misoproject/d3.chart/master/d3.chart.js"></script>
+    <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+    <script src="http://rawgit.com/virajsanghvi/d3.chart.defaults/master/d3.chart.defaults.js"></script>
+    <!--<script scr="./shot_plot.js"></script>-->
+    <script scr="./dataGrab.js"></script>
+    <script src="./d3.basketball-shot-chart.js"></script>
+    
 
     <script src="curry/js/bar.js"></script>
     <script src="curry/js/collegeVis.js"></script>

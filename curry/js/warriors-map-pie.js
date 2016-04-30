@@ -15,8 +15,8 @@ var projection = d3.geo.albersUsa()
     .scale([600]);
 
 //Define path generator
-var path = d3.geo.path()
-    .projection(projection);
+var path4 = d3.geo.path()
+    .projection(projection)
 
 //Map the winrate to opacity[0.3, 0.9] 
 var Opacity = d3.scale.linear()
@@ -69,7 +69,7 @@ d3.csv("curry/data/US-states.csv", function(data) {
             .append("path")
             .attr("stroke","white")
             .attr("stroke-width",2)
-            .attr("d", path)
+            .attr("d", path4)
             .attr("class", function(d) {
                 return d.properties.postal;})
             .attr("width", width)
@@ -93,8 +93,8 @@ d3.csv("curry/data/US-states.csv", function(data) {
         //Load in NBA teams data
         d3.csv("curry/data/NBA-teams.csv", function(data) {
             team_data = data;
-            console.log("check")
-            console.log(team_data)
+            //console.log("check")
+            //console.log(team_data)
             //Map the rank to radius[2, 20] 
             Scale.domain([0, d3.max(data, function(d) { return d.winrate; })]);
             //Map the rank to opacity[0.3, 0.9] 
@@ -146,10 +146,8 @@ d3.csv("curry/data/US-states.csv", function(data) {
                 .text(function(d) {
                     return d.abb;});
 
-            console.log("test!!");
             console.log(team_data[15]);
             teamClick(team_data[15]);
-
         });
     });
 });
@@ -186,66 +184,33 @@ var teamList = [];
 
 //When click a Node
 function teamClick(d) {
-    console.log(teamList)
-    console.log(d)
-    console.log(d.lightColor)
-    console.log(d.darkColor)
-
+    //Restore the node color
     selectedTeamName = d.teamname;
-    if (contains(teamList, selectedTeamName)) { //Contains the node
-        //Restore the node color
-        d3.select(this)
-            .style("fill", function(d){
+    teamList = []
+    teamList.push(selectedTeamName);
+
+    d3.select("circle")
+        .style("fill", function(d){
             if (d.EASTorWEST == "East") {
                 return "blue";
             } else {
                 return "red";
-            };
+            }
         });
-        //Remove in the teamList;
-        teamList.remove(selectedTeamName);
 
-        //Existing node number after deleting
-        if (teamList.length == 0) {
-            d3.selectAll(".pie-chart").remove();
-        } 
-        if (teamList.length == 1) {
-            createPieChart(d.teamname, d.lightColor,d.darkColor);
-            d3.selectAll(".teamRadar").remove();
-        }
-        if  (teamList.length >= 2) {
-            //renderRadarChart();
-        }
-    } else {    //Does not contain the node
-        teamList = []
-        teamList.push(selectedTeamName);
-        d3.selectAll("circle").style("fill", function(d){
-                    if (d.EASTorWEST == "East") {
-                        return "blue";
-                    } else {
-                        return "red";
-                    };
-                })
-        if (!first)
+
+    if (!first)
         {
-            active = d3.select(this).style("fill", "#FFD700");
+            d3.selectAll(".pie-chart").remove();
         }
         else{
-            d3.select(".GSW").style("fill", "#FFD700");
             first = false;
         }
-
-        createPieChart(d.teamname, d.lightColor,d.darkColor);
-    }
-
-
-
+    createPieChart(d.teamname, d.lightColor,d.darkColor);
+}
 
 //Create PieChart for players
 function createPieChart(teamname1,light,dark) {
-    console.log(light);
-    console.log(dark);
-
         d3.select("#team-name")
             .text(teamname1)
             .attr("fill","white");
@@ -260,8 +225,6 @@ function createPieChart(teamname1,light,dark) {
         teamPlayer = [];
         //teamPlayerName for returning a color;
         teamPlayerName = [];
-
-        console.log(teamList)
         //Load each players' data
         d3.csv("curry/data/players.csv", function(error, playerData) {
             playerData.forEach(function(d) {
@@ -286,8 +249,6 @@ function createPieChart(teamname1,light,dark) {
                         TOV: d.TOV
                     });
                     teamPlayerName.push(d.player);
-                    console.log("test")
-                    console.log(teamPlayer)
                 }
             });
 
@@ -362,7 +323,6 @@ function createPieChart(teamname1,light,dark) {
                     .text(function() { return fullAttrName[i] })
                     .call(tip); 
 
-                console.log(i);
                 if (i == 0) { 
                     pie.value(function(d) { return d.PTS; });
                 }
@@ -387,7 +347,7 @@ function createPieChart(teamname1,light,dark) {
                     .range([dark])
                     .interpolate(d3.interpolateLab);
 
-                var path = pieChart.selectAll(".solidArc")
+                var path3 = pieChart.selectAll(".solidArc")
                     .data(pie(playerDataset(teamPlayer)))
                     .enter().append("path")
                     .attr("fill", function(d) { return pieColor(teamPlayerName.indexOf(d.data.player)); })
@@ -430,7 +390,7 @@ function createPieChart(teamname1,light,dark) {
                 };
             });
         }
-    }
+    
 }
 
 
@@ -447,6 +407,7 @@ function nodeMouseover(d){
     d3.select(this).select("circle")
         .transition()
         .duration(200)
+        .style("fill", "yellow")
         .attr("r", function(d){ 
             return Scale(d.winrate); })
         .style("opacity", 1)
@@ -479,12 +440,20 @@ function nodeMouseout(d){
         .duration(200)
         .attr("r", function(d) { 
             return Scale(d.winrate/2); })
+        .style("fill", function(d){
+            if (d.EASTorWEST == "East") {
+                return "blue";
+            } else {
+                return "red";
+            }
+        })
         .style("opacity", function(d){
             return Opacity(d.winrate);})
         .style("stroke-width", "1px");
 
     d3.select(this).select("text")
         .transition()
+        .attr("fill", "yellow")
         .duration(200)
         .attr("dx", function(d){
             return Scale(d.winrate);})
@@ -495,3 +464,5 @@ function nodeMouseout(d){
     g.select("image")
         .remove();
 }
+
+
