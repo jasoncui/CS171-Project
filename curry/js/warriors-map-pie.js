@@ -145,8 +145,7 @@ d3.csv("curry/data/US-states.csv", function(data) {
                 .style("cursor", "default")
                 .text(function(d) {
                     return d.abb;});
-
-            console.log(team_data[15]);
+                
             teamClick(team_data[15]);
         });
     });
