@@ -293,7 +293,6 @@ var BasketballShotChart = d3.chart('BasketballShotChart', {
                 return this.append('path')
                     .classed('shot-chart-hexagon', true)
                      .on("mouseover", function(d) { 
-                        console.log(d);
                             var dist = Math.sqrt(Math.pow(d.x - 25,2) + Math.pow(d.y - 30,2));
                             div.transition()        
                                 .duration(200)      
@@ -433,6 +432,7 @@ d3.json("curry/data/curry.json", function(error, body){
 if (error) return console.warn(error);
 var data3 = body;
 var playerArray = data3.resultSets[0].rowSet;
+
 
 var x = [];
 var y = [];
