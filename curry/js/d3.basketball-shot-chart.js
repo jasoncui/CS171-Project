@@ -3,7 +3,6 @@ var clipCounter = 0;
 var BasketballShotChart = d3.chart('BasketballShotChart', {
     initialize: function () {
         this.calculateVisibleCourtLength();
-
         var base = this.base
             .attr('class', 'shot-chart');
         this.drawCourt();
@@ -142,32 +141,38 @@ var BasketballShotChart = d3.chart('BasketballShotChart', {
         var hexagon = hexbin.hexagon(largestHexagonRadius);
         var colorLegend = this.base.append('g')
             .classed('legend', true);
+
+        var efficiency_legend =[">0%", "<25%", "<50%", "<75%", "<100%"]
+
+
+        colorLegend.selectAll('path').data(efficiency_legend)
+            .enter()
+            .append("text")
+            .attr("transform", function (d, i) {
+                return "translate(" +
+                    (colorXStart + ((i*2.2) *largestHexagonRadius)) + ", " +
+                    (colorYStart - 1.5) + ")";
+            })
+            .text(function(d,i){ return d;})
+            .attr("fill", "white")
+            .style("font-size", "0.75")
+
+
         colorLegend.append("text")
             .attr("fill", "white")
             .classed('legend-title', true)
             .attr("x", colorXMid)
-            .attr("y", colorYStart - largestHexagonRadius * 2)
+            .attr("y", colorYStart - largestHexagonRadius * 2 - 2)
             .attr("text-anchor", "middle")
             .text(this._colorLegendTitle);
-        colorLegend.append("text")
-            .attr("fill", "white")
-            .attr("x", colorXStart)
-            .attr("y", colorYStart)
-            .attr("text-anchor", "end")
-            .text(this._colorLegendStartLabel);
-        colorLegend.append("text")
-            .attr("fill", "white")
-            .attr("x", colorXStart + heatRange.length * 2 * largestHexagonRadius)
-            .attr("y", colorYStart)
-            .attr("text-anchor", "start")
-            .text(this._colorLegendEndLabel);
+
         colorLegend.selectAll('path').data(heatRange)
             .enter()
             .append('path')
             .attr('d', hexagon)
             .attr("transform", function (d, i) {
                 return "translate(" +
-                    (colorXStart + ((1 + i*2) *largestHexagonRadius)) + ", " +
+                    (colorXStart + ((1 + i*2) *largestHexagonRadius*1.1)) + ", " +
                     (colorYStart) + ")";
             })
             .style('fill', function (d, i) { return d; });
@@ -288,6 +293,7 @@ var BasketballShotChart = d3.chart('BasketballShotChart', {
                 return this.append('path')
                     .classed('shot-chart-hexagon', true)
                      .on("mouseover", function(d) { 
+                        console.log(d);
                             var dist = Math.sqrt(Math.pow(d.x - 25,2) + Math.pow(d.y - 30,2));
                             div.transition()        
                                 .duration(200)      
@@ -357,7 +363,7 @@ d3.chart.initializeDefaults(BasketballShotChart, {
     // backboard width (ft)
     basketWidth: 6,
     // title of hexagon color legend
-    colorLegendTitle: 'Efficiency',
+    colorLegendTitle: 'Percentage',
     // label for starting of hexagon color range
     colorLegendStartLabel: '< avg',
     // label for ending of hexagon color range
@@ -402,7 +408,7 @@ d3.chart.initializeDefaults(BasketballShotChart, {
     // radius of restricted circle (ft)
     restrictedCircleRadius: 4,
     // title of hexagon size legend
-    sizeLegendTitle: 'Frequency',
+    sizeLegendTitle: 'Shot Frequency',
     // label of start of hexagon size legend
     sizeLegendSmallLabel: 'low',
     // label of end of hexagon size legend
