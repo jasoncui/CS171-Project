@@ -265,7 +265,9 @@ function createPieChart(teamname1,light,dark) {
                 .html(function(d) { return "<h6>" + d.data.player + "</h6>" + 
                         "<span>Points: " + d.data.PTS + "<br>" + "Assists: " + d.data.AST+ "<br>" +
                         "Blocks: " + d.data.BLK+ "<br>" + "Rebounds: " + d.data.REB+ "<br>" +
-                        "Steals: " + d.data.STL+ "<br>" + "Turnovers: " + d.data.TOV+ "</span>"; });;
+                        "Steals: " + d.data.STL+ "<br>" + "Turnovers: " + d.data.TOV+ "</span>"; })
+                .style({top:0});
+
 
             var outlineArc = d3.svg.arc()
                 .innerRadius(innerRadius)
@@ -286,9 +288,9 @@ function createPieChart(teamname1,light,dark) {
                 var arc = d3.svg.arc().innerRadius(innerRadius)
                     .outerRadius(radius);
                 //In the center
-                var shortAttrName = ["Points", "Assists", "Rebounds", "Blokcks", "Steals", "Turnovers"];
+                var shortAttrName = ["Points", "Assists", "Rebounds", "Blocks", "Steals", "Turnovers"];
                 //For the title when hover
-                var fullAttrName = ["Points", "Assists", "Rebounds", "Blokcks", "Steals", "Turnovers"];
+                var fullAttrName = ["Points", "Assists", "Rebounds", "Blocks", "Steals", "Turnovers"];
 
                 pie_w = 200;
                 pie_h = 300;

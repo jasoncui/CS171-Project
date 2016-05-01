@@ -1,6 +1,4 @@
-/**
- * Created by llp631 on 2014/12/17 0017.
- */
+
 // d3.tip
 // Copyright (c) 2013 Justin Palmer
 //

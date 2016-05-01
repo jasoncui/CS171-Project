@@ -945,3 +945,9 @@ div.tooltip {
     width: 80%;
     margin-bottom: 20px;
 }
+
+.map-pie {
+    margin: 0 auto;
+    text-align:center;
+    width: 80%;
+}
