@@ -91,7 +91,7 @@ d3.csv("curry/data/US-states.csv", function(data) {
             });
 
         //Load in NBA teams data
-        d3.csv("curry/data/NBA-teams.csv", function(data) {
+        d3.csv("curry/data/map-pie-NBA-teams.csv", function(data) {
             team_data = data;
             //console.log("check")
             //console.log(team_data)
@@ -225,7 +225,7 @@ function createPieChart(teamname1,light,dark) {
         //teamPlayerName for returning a color;
         teamPlayerName = [];
         //Load each players' data
-        d3.csv("curry/data/players.csv", function(error, playerData) {
+        d3.csv("curry/data/map-pie-players.csv", function(error, playerData) {
             playerData.forEach(function(d) {
                 //change into number
                 d.PTS = +d.PTS

@@ -428,7 +428,7 @@ d3.chart.initializeDefaults(BasketballShotChart, {
     width: 500,
 });
 
-d3.json("curry/data/curry.json", function(error, body){
+d3.json("curry/data/curry-shot-chart-data.json", function(error, body){
 if (error) return console.warn(error);
 var data3 = body;
 var playerArray = data3.resultSets[0].rowSet;

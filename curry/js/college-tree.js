@@ -18,8 +18,8 @@ var college_tree_svg = d3.select("#college-tree").append("svg")
     .append("g")
     .attr("transform", "translate(" + college_tree_margin.left + "," + college_tree_margin.top + ")");
 
-// pull data from college_tree.json
-d3.json("curry/data/college_tree.json", function(error, flare) {
+// pull data from curry-college-tree.json
+d3.json("curry/data/curry-college-tree.json", function(error, flare) {
     if (error) throw error;
 
     root = flare;

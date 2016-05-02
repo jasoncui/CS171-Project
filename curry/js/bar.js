@@ -46,7 +46,7 @@
 
     svg.call(tip);
 
-    d3.csv("curry/data/curry_college_data.csv", type, function(error, data) {
+    d3.csv("curry/data/curry-college-data.csv", type, function(error, data) {
 
         console.log(data);
 

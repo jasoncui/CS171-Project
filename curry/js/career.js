@@ -25,7 +25,7 @@ tip = d3.tip().attr('class', 'd3-tip').html(function(d)
 tip.offset([-20, -20])
 
 function loadData() {
-	d3.csv("curry/data/curry_season_points.csv", function(error, csv) {
+	d3.csv("curry/data/curry-warriors-data.csv", function(error, csv) {
 		csv.forEach(function(d){	
 			d.G = +d.G;
 			d.FG_P = +d.FG_P;

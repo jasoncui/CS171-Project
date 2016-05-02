@@ -31,7 +31,7 @@ var multiple_bar_tip = d3.tip()
     });
 
 // csv loaded asynchronously
-d3.tsv("curry/data/multiple_bar_data.tsv", type, function(data) {
+d3.tsv("curry/data/curry-college-multiple-bar-data.tsv", type, function(data) {
 
     // Data is nested by shot
     var shots = d3.nest()
