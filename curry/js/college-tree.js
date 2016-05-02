@@ -1,6 +1,6 @@
 var college_tree_margin = {top: 20, right: 120, bottom: 20, left: 120},
-    college_tree_width = 960 - college_tree_margin.right - college_tree_margin.left,
-    college_tree_height = 400 - college_tree_margin.top - college_tree_margin.bottom;
+        college_tree_width = 960 - college_tree_margin.right - college_tree_margin.left,
+        college_tree_height = 400 - college_tree_margin.top - college_tree_margin.bottom;
 
 var i = 0,
     duration = 750,

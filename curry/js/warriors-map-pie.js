@@ -145,8 +145,7 @@ d3.csv("curry/data/US-states.csv", function(data) {
                 .style("cursor", "default")
                 .text(function(d) {
                     return d.abb;});
-
-            console.log(team_data[15]);
+                
             teamClick(team_data[15]);
         });
     });
@@ -288,9 +287,9 @@ function createPieChart(teamname1,light,dark) {
                 var arc = d3.svg.arc().innerRadius(innerRadius)
                     .outerRadius(radius);
                 //In the center
-                var shortAttrName = ["Points", "Assists", "Rebounds", "Blokcks", "Steals", "Turnovers"];
+                var shortAttrName = ["Points", "Assists", "Rebounds", "Blocks", "Steals", "Turnovers"];
                 //For the title when hover
-                var fullAttrName = ["Points", "Assists", "Rebounds", "Blokcks", "Steals", "Turnovers"];
+                var fullAttrName = ["Points", "Assists", "Rebounds", "Blocks", "Steals", "Turnovers"];
 
                 pie_w = 200;
                 pie_h = 300;
