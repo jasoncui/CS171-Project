@@ -245,7 +245,7 @@
 
                 <!-- college tree graph -->
                 <div class="space-at-top box tree-vis">
-                    <h2 id="yellow-highlight" class="text-center">College Records and Awards</h2>
+                    <h2 id="yellow-highlight" class="text-center" style="margin-bottom: 10px;">College Records and Awards</h2>
                     <i class="text-faded">Click on one of the below nodes to expand the tree. Clicking on an already expanded node will contract the tree.</i>
                     <div id="college-tree" class="wow fadeIn" data-wow-delay="0.5s"></div>
                 </div>
@@ -351,61 +351,58 @@
 
             <!-- row of text -->
             <div class="row">
-                <p style="color: red;">CHANGE TEXT HERE</p>
-                <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+                <p class="text-secondary box">
+                    Many basketball players have deemed Curry as the greatest shooter in NBA history, and for good reason. Curry is currently the league leader for multiple shooting statistics and has broken numerous shooting records held in the NBA. Curry plays almost exclusively at the point guard position and has career averages of <span id="yellow-highlight">22.4 points, 6.9 assists, and 1.8 steals per game</span>. Using an unorthodox jump shot, he is able to get the ball out of his hands in under half a second by releasing it on the way up, adding extra arc to his shot and making it difficult to block. In addition to his quick release, he puts extra pressure on defenses with his long range, leading the NBA in field goals made from beyond 28 feet in 2016. In an article for FiveThirtyEight, Benjamin Morris emphasized Curry's importance in the NBA's increasing use of the three-point shot, writing, <span id="yellow-highlight">Curry is perhaps the figurehead in the NBA's Three-Point Revolution."</span>
+                </p>
             </div>
 
             <!-- 3s graph and text -->
-            <div class="row space-at-bottom">
+            <div class="row">
                 <div class="col-md-8">
                     <div class="nv-box warriors-leaders-vis text-center" style="margin-bottom: 20px;">
                         <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Threes</h2>
-                        <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
-                        <svg id="leaders-threes"></svg>
+                        <i class="text-faded">Hover over the bars below to view specific tooltip data for each player.</i>
+                        <svg id="leaders-threes" class="wow fadeIn" data-wow-delay="0.3s"></svg>
                     </div>
 
                 </div>
                 <div class="col-md-4">
-                    <p style="color: red;">CHANGE TEXT HERE</p>
                     <p class="text-secondary box">
-                        Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. nst Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. nst Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds.</p>
-
+                        The graph on the right depicts statistics for league leaders in the NBA for three-pointers in the 2015-16 regular season. We see that Curry dominated the competition, netting a total of 402 three-pointers in the regular season which is almost 100 threes more than second place Klay Thompson (who happens to be Curry's teammate on the Warriors).
+                        <br><br>
+                        Curry's 402 three-pointers in the 2015-16 regular season also happens to be the <span id="yellow-highlight">all-time NBA record</span> for most three-pointers made in a regular season. Curry also holds the record for the most consecutive games with a made three-pointer (<span id="yellow-highlight">152</span>) and  most three-pointers made in a game (<span id="yellow-highlight">12</span>). Curry also holds the same records for the Warriors franchise.
                     </p>
                 </div>
             </div>
 
             <!-- row of text -->
             <div class="row">
-                <p style="color: red;">CHANGE TEXT HERE</p>
-                <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+                <p class="text-secondary box">
+                    Evidently Curry is a phenomal three-point shooter -- being the league leader in multiple aspects. It is then interesting to break down all of Curry's three-pointers per game, per season. The following graph below takes a look at all of Curry's regular NBA seasons -- from 2009 to 2016 -- and tallies the total number of three-pointers scored per game. A typical NBA season will contain around 82 games with minor fluctuationts. Curry sat out more in some seasons than others for a multitude of reasons (injuries, benched in leading games to rotate in other players, etc.) which is reflected in the data.
+                    <br><br>
+                    Each color represents one of Curry's individual seasons, as outlined in the legend in the top right corner. The graph is structured to show the number of three-pointers scored per game in each season. Hovering over the graph will bring up a tooltip showing the three-pointers scored in that specific game for each season. Clicking on a specific season in the legend will remove that dataset from the graph and the graph will repopulate. Clicking on different graph representations in the top left corner will toggle between the different representations.
+                </p>
             </div>
 
             <!-- Threes per game graph, 100% width -->
             <div class="nv-box-threes space-at-bottom warriors-threes-vis text-center">
-                <h2 id="yellow-highlight" style="margin-top: 5px; margin-bottom: 10px;">Three Pointers Per Game</h2>
-                <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                <h2 id="yellow-highlight" style="margin-top: 5px; margin-bottom: 10px;">Curry's Three Pointers Per Game</h2>
                 <svg id="warriors-threes"></svg>
-            </div>
-
-            <!-- row of text -->
-            <div class="row">
-                <p style="color: red;">CHANGE TEXT HERE</p>
-                <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
             </div>
 
             <!-- field goal leaders and graph -->
             <div class="row">
                 <div class="col-md-4">
-                    <p style="color: red;">CHANGE TEXT HERE</p>
                     <p class="text-secondary box">
-                        Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. nst Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. nst Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds.</p>
-
+                        Curry is not only a phenomenal shooter in terms of three-pointers made, but also field goals within the arc. In the 2015-16 regular season, Curry led the league in number of field goals made, netting <span id="yellow-highlight">805</span>, a decent margin above second place Lebron James.
+                        <br><br>
+                        Proving himself to be a very versatile shooter, Curry adopts the same style of quick release for all field goals. Curry will often release shots off of one foot after a quick combination move, or fadeaway with a similar quick release. While Curry does hold the record, he is also one of the most prolific shooters in terms of number of attempts. Still, his shooting percentage remains high.
                     </p>
                 </div>
                 <div class="col-md-8">
                     <div class="nv-box-FGs warriors-leaders-vis text-center" style="margin-bottom: 20px;">
                         <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Field Goals</h2>
-                        <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                        <i class="text-faded">Hover over the bars below to view specific tooltip data for each player.</i>
                         <svg id="leaders-FGs"></svg>
                     </div>
                 </div>
@@ -433,14 +430,14 @@
                 <div class="col-md-6">
                     <div class="nv-box space-at-bottom warriors-leaders-vis text-center" style="margin-bottom: 20px;">
                         <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Free Throw Percentages</h2>
-                        <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                        <i class="text-faded">Hover over the bars below to view specific tooltip data for each player.</i>
                         <svg id="leaders-FTPercentage"></svg>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="nv-box space-at-bottom warriors-leaders-vis text-center">
                         <h2 id="yellow-highlight" class="text-center" style="margin-top: 5px; margin-bottom: 10px;">2015-16 League Leaders in Points Scored Per Game</h2>
-                        <i class="text-faded">Click on any of the teams to find the data distribution. The circles' sizes and darkness of color are directly correlated to the winning rate of each team. </i>
+                        <i class="text-faded">Hover over the bars below to view specific tooltip data for each player.</i>
                         <svg id="leaders-PPG"></svg>
                     </div>
                 </div>
@@ -448,8 +445,11 @@
 
             <!-- row of text -->
             <div class="row">
-                <p style="color: red;">CHANGE TEXT HERE</p>
-                <p class="text-secondary box">Before Curry even played one college game, head coach Bob McKillop said at a Davidson alumni event, <span id="yellow-highlight">"Wait 'til you see Steph Curry. He is something special."</span> In his first collegiate game, against Eastern Michigan, Curry finished with 15 points but committed 13 turnovers. In the next game, against Michigan, he scored 32 points, dished out 4 assists, and grabbed 9 rebounds. Curry finished the season leading the Southern Conference in scoring with 21.5 points per game. He was second in the nation among freshmen in scoring, behind only Kevin Durant of Texas. Curry's scoring ability helped the Wildcats to a 29–5 overall record and a Southern Conference regular season title. On March 2, 2007, in the Southern Conference tournament semi-finals against Furman, Curry made his 113th three-pointer of the year, breaking Keydren Clark's NCAA freshman season record for 3-point field goals.</p>
+                <p class="text-secondary box">
+                    Curry also proves himself to be dominant in many other aspects of the game. In the 2015-16 regular season Curry was the league leader in free throw percentages, making <span id="yellow-highlight">91%</span> of all free throws from the line. The variation between leaders in free throw percentages is very very small, but Curry still maintains his lead.
+                    <br><br>
+                    His prolific shooting also makes Curry the league leader in points scored per game. In the 2015-16 regular season Curry averaged <span id="yellow-highlight">30.1</span> points per game -- the league high.
+                </p>
             </div>
 
         </div> <!-- /row -->
